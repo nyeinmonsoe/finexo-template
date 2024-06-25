@@ -535,6 +535,11 @@ a:focus {
   padding: 0px 20px 20px;
   line-height: 2;
 }
+.company-overview{
+  border-left: 3px solid white;
+  padding-left: 7px;
+  font-weight: bold;
+}
 .heading_container heading_center{
   line-height: 2;
 }
@@ -548,10 +553,6 @@ background-color: #f8f8f9;
 .name {
   font-weight: bold;
   font-size: xx-large;
-}
-.company-info{
-  border-left: 2px solid white; 
-  padding: 4px 20px
 }
 
 .d-flex {
