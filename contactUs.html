@@ -14,6 +14,7 @@
   <link rel="shortcut icon" href="images/favicon.png" type="">
 
   <title> 豊　雨　株　式　会　社 </title>
+  <title> 豊　雨　株　式　会　社 </title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -37,7 +38,9 @@
 
 <body class="sub_page">
 
+
   <div class="hero_area">
+
 
     <div class="hero_bg_box">
       <div class="bg_img_box">
@@ -51,35 +54,45 @@
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <img id="logo-size" src="img/logo-white.png" alt="">
           <a class="navbar-brand" href="top.html">
-            <span>
-              豊　雨　株　式　会　社
-            </span>
-          </a>
+            <img id="logo-size" src="img/logo-white.png" alt="">
+            <a class="navbar-brand" href="top.html">
+              <span>
+                豊　雨　株　式　会　社
+                豊　雨　株　式　会　社
+              </span>
+            </a>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=""> </span>
-          </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  ">
-              <li class="nav-item">
-                <a class="nav-link" href="compInfo.html">会社情報 </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="tradeAndWholesale.html"> 貿易・卸売</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="humanResourceServices.html">人材サービス</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="socialInitiatives.html">社会への取組</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="contactUs.html">お問い合わせ<span class="sr-only">(current)</span></a>
-              </li>
-            </ul>
-          </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                <li class="nav-item">
+                  <a class="nav-link" href="compInfo.html">会社情報 </a>
+                  <a class="nav-link" href="compInfo.html">会社情報 </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tradeAndWholesale.html"> 貿易・卸売</a>
+                  <a class="nav-link" href="tradeAndWholesale.html"> 貿易・卸売</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="humanResourceServices.html">人材サービス</a>
+                  <a class="nav-link" href="humanResourceServices.html">人材サービス</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="socialInitiatives.html">社会への取組</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="contactUs.html">お問い合わせ<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="socialInitiatives.html">社会への取組</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="contactUs.html">お問い合わせ<span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+            </div>
         </nav>
       </div>
     </header>
@@ -112,224 +125,288 @@
                 </div>
               </div>
             </div>
+            <section class="contact-section layout_padding">
+              <div class="container">
+                <div class="heading_container heading_center">
+                  <h2 class="text-center pb-2">お問い合わせ</h2>
+                </div>
+                <form action="mail.php" method="POST">
+                  <div class="card bg-color mt-10">
+                    <div class="card-body">
+                      <div class="row pb-3 align-items-center col-auto">
+                        <label class="col-sm-3 col-form-label">お名前（漢字）<span class="text-danger">※</span></label>
+                        <div class="row col-auto">
+                          <div class="col-auto">
+                            <div data-mdb-input-init class="form-outline">
+                              <label class="form-label" for="お名前姓">姓</label>
+                              <input type="text" name="お名前姓" class="form-control" />
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div data-mdb-input-init class="form-outline">
+                              <label class="form-label" for="お名前名">名</label>
+                              <input type="text" name="お名前名" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
-            <div class="row pb-3 align-items-center col-auto">
-              <label class="col-sm-3 col-form-label">お名前（かな）<span class="text-danger">※</span></label>
-              <div class="row col-auto">
-                <div class="col-auto">
-                  <div data-mdb-input-init class="form-outline">
-                    <label class="form-label" for="ふりがな姓">姓</label>
-                    <input type="text" name="ふりがな姓" class="form-control" />
+                      <div class="row pb-3 align-items-center col-auto">
+                        <label class="col-sm-3 col-form-label">お名前（かな）<span class="text-danger">※</span></label>
+                        <div class="row col-auto">
+                          <div class="col-auto">
+                            <div data-mdb-input-init class="form-outline">
+                              <label class="form-label" for="ふりがな姓">姓</label>
+                              <input type="text" name="ふりがな姓" class="form-control" />
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div data-mdb-input-init class="form-outline">
+                              <label class="form-label" for="ふりがな名">名</label>
+                              <input type="text" name="ふりがな名" class="form-control" />
+                              <div class="row pb-3 align-items-center col-auto">
+                                <label class="col-sm-3 col-form-label">お名前（かな）<span class="text-danger">※</span></label>
+                                <div class="row col-auto">
+                                  <div class="col-auto">
+                                    <div data-mdb-input-init class="form-outline">
+                                      <label class="form-label" for="ふりがな姓">姓</label>
+                                      <input type="text" name="ふりがな姓" class="form-control" />
+                                    </div>
+                                  </div>
+                                  <div class="col-auto">
+                                    <div data-mdb-input-init class="form-outline">
+                                      <label class="form-label" for="ふりがな名">名</label>
+                                      <input type="text" name="ふりがな名" class="form-control" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row align-items-center pb-3 col-auto">
+                                <label class="col-sm-3 col-form-label" for="会社学校名">会社・学校名</label>
+                                <div class="col-auto">
+                                  <input type="text" name="会社学校名" size="30" class="form-control">
+                                </div>
+                              </div>
+                              <div class="row align-items-center pb-3 col-auto">
+                                <label class="col-sm-3 col-form-label" for="部署役職名">部署・役職名</label>
+                                <div class="col-auto">
+                                  <input type="text" name="部署役職名" size="30" class="form-control">
+                                </div>
+                              </div>
+
+                              <div class="row align-items-center pb-3 col-auto">
+                                <label class="col-sm-3 col-form-label">住所</label>
+                                <div class="col-auto">
+                                  <textarea name="住所" cols="30" rows="4" class="form-control"></textarea>
+                                </div>
+                              </div>
+                              <div class="row align-items-center pb-3 col-auto">
+                                <div class="col-md-3">
+                                  <h6 class="mb-0">メールアドレス<span class="text-danger">※</span></h6>
+                                </div>
+                                <div class="col-auto">
+                                  <input type="email" name="メールアドレス" size="30" class="form-control" />
+                                </div>
+                              </div>
+                              <div class="row align-items-center pb-3 col-auto">
+                                <div class="col-sm-3">
+                                  <h6 class="mb-0">メールアドレス(確認用)<span class="text-danger">※</span></h6>
+                                </div>
+                                <div class="col-auto">
+                                  <input type="email" name="メールアドレス確認用" size="30" class="form-control" />
+                                </div>
+                              </div>
+                              <div class="row g-2 align-items-center pb-3 col-auto">
+                                <label class="col-sm-3 col-form-label">日中連絡先</label>
+                                <div class="col-auto">
+                                  <input type="text" name="日中連絡先" size="30" class="form-control">
+                                </div>
+                              </div>
+                              <div class="row align-items-center pb-3 col-auto">
+                                <label class="col-sm-3 col-form-label">問い合わせ種別<span class="text-danger">※</span></label>
+                                <div class="col-auto">
+                                  <select class="form-control form-select" name="問い合わせ種別">
+                                    <option value="貿易関係">貿易関係</option>
+                                    <option value="お仕事を探しの方">お仕事を探しの方</option>
+                                    <option value="企業のご担当の方">企業のご担当の方</option>
+                                    <option value="その他問い合わせ">その他問い合わせ</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="row align-items-center pb-3 col-auto">
+                                <label class="col-sm-3 col-form-label">ご相談・お問い合わせ内容<span
+                                    class="text-danger">※</span></label>
+                                <div class="col-auto">
+                                  <textarea name="お問い合わせ詳細" cols="30" rows="10" class="form-control"></textarea>
+                                </div>
+                              </div>
+                              <div class="row align-items-center col-auto">
+                                <label class="col-sm-3 col-form-label">豊雨を知ったきっかけ</label>
+                                <div class="col-auto">
+                                  <select class="form-control form-select" name="豊雨を知ったきっかけ">
+                                    <option value="豊雨からの営業">豊雨からの営業</option>
+                                    <option value="DMなど">DMなど</option>
+                                    <option value="豊雨利用者・知人の紹介">豊雨利用者・知人の紹介</option>
+                                    <option value="捜索エンジン">捜索エンジン</option>
+                                    <option value="その他">その他</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="contact-agree" class="card bg-color mt-4 mb-3">
+                            <div class="card-body">
+                              <h4 class="text-center"><b>◆プライバシーポリシー</b></h4>
+                              <p class="pb-2">
+                                ご入力いただいきました個人情報は、当社の個人情報保護方針のもとで、厳重なセキュリティ対策を施し、適正な個人情報の管理を実施いたします。
+                                </br>なお、ご入力いただきました個人情報につきましては、以下の目的で利用いたします。</p>
+                              <p class="pb-1 mt-0">当社サービスに関する情報の提供・収集のため</p>
+                              <p class="pb-1 mt-0">当社サービスに関する情報、セミナー、その他情報のご案内のため</p>
+                              <p class="mt-0">当社のマーケティング活動における顧客分析・統計調査</p>
+                              <p class="pb-1">
+                                当社では、個人情報を上記に記載している利用目的の範囲内で委託先に開示する場合および法令に基づいて提供する場合を除き、あらかじめご本人から同意を得ることなく第三者に開示または提供することはありません。
+                                なお、委託先に個人情報を開示する場合には、 当社が定める安全対策基準を満たす事業者を選定し、適切な管理・監督をおこないます。
+                                ご登録いただく情報につきましては、皆様の自由なご判断に基づいて おこなっていただいておりますが、必要な情報をご入力いただけない場合は、
+                                当社サービスに関する情報等が提供できない場合がございますのでご了承ください。
+                              </p>
+                              <p class="pb-2">当社の個人情報の取扱いに関する苦情、お客様ご本人の情報についての開示・訂正・削除のご依頼につきましては、「個人情報保護方針」をご覧ください。</p>
+                              <a href="pri.html">個人情報保護方針</a>
+                            </div>
+                          </div>
+                          <p class="text-center py-2"><input type="checkbox" name="agree" id="agree"
+                              onchange="ContactAgreement(this)">
+                            プライバシーポリシーに同意する</p>
+                          <p class="text-center">
+                            <input type="submit" value="内容を確認する" class="btn btn-outline-primary text-center"
+                              id="contact-confirm" disabled>
+                          </p>
+                </form>
+              </div>
+            </section>
+            <!-- end contact section -->
+
+
+
+            <!-- info section -->
+
+
+            <section class="info_section layout_padding2">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6 col-lg-3 info_col">
+                    <div class="info_contact">
+                      <h4>
+                        お問い合わせ
+                        お問い合わせ
+                      </h4>
+                      <div class="contact_link_box">
+                        <a href="">
+                          <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          <span>
+                            中国(上海)自由贸易试验区华申路180号1幢六层6020室
+                            中国(上海)自由贸易试验区华申路180号1幢六层6020室
+                          </span>
+                        </a>
+                        <a href="">
+                          <i class="fa fa-phone" aria-hidden="true"></i>
+                          <span>
+                            Call 021-58367307
+                            Call 021-58367307
+                          </span>
+                        </a>
+                        <a href="">
+                          <i class="fa fa-envelope" aria-hidden="true"></i>
+                          <span>
+                            info@example.com
+                            info@example.com
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="info_social">
+                      <a href="https://www.facebook.com/profile.php?id=100061816236948">
+                        <a href="https://www.facebook.com/profile.php?id=100061816236948">
+                          <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://mobile.twitter.com/toyoame">
+                          <a href="https://mobile.twitter.com/toyoame">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                          </a>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-2 mx-auto info_col">
+                    <div class="info_link_box">
+                      <h4>
+                        メニュー
+                        メニュー
+                      </h4>
+                      <div class="info_links">
+                        <a class="active" href="top.html">
+                          会社情報
+                          <a class="active" href="top.html">
+                            会社情報
+                          </a>
+                          <a class="" href="tradeAndWholesale.html">
+                            貿易・卸売
+                            <a class="" href="tradeAndWholesale.html">
+                              貿易・卸売
+                            </a>
+                            <a class="" href="humanResourceServices.html">
+                              人材サービス
+                              <a class="" href="humanResourceServices.html">
+                                人材サービス
+                              </a>
+                              <a class="" href="socialInitiatives.html">
+                                社会への取組
+                                <a class="" href="socialInitiatives.html">
+                                  社会への取組
+                                </a>
+                                <a class="" href="contactUs.html">
+                                  お問い合わせ
+                                  <a class="" href="contactUs.html">
+                                    お問い合わせ
+                                  </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="col-auto">
-                  <div data-mdb-input-init class="form-outline">
-                    <label class="form-label" for="ふりがな名">名</label>
-                    <input type="text" name="ふりがな名" class="form-control" />
-                  </div>
-                </div>
               </div>
-            </div>
-            <div class="row align-items-center pb-3 col-auto">
-              <label class="col-sm-3 col-form-label" for="会社学校名">会社・学校名</label>
-              <div class="col-auto">
-                <input type="text" name="会社学校名" size="30" class="form-control">
-              </div>
-            </div>
-            <div class="row align-items-center pb-3 col-auto">
-              <label class="col-sm-3 col-form-label" for="部署役職名">部署・役職名</label>
-              <div class="col-auto">
-                <input type="text" name="部署役職名" size="30" class="form-control">
-              </div>
-            </div>
-
-            <div class="row align-items-center pb-3 col-auto">
-              <label class="col-sm-3 col-form-label">住所</label>
-              <div class="col-auto">
-                <textarea name="住所" cols="30" rows="4" class="form-control"></textarea>
-              </div>
-            </div>
-            <div class="row align-items-center pb-3 col-auto">
-              <div class="col-md-3">
-                <h6 class="mb-0">メールアドレス<span class="text-danger">※</span></h6>
-              </div>
-              <div class="col-auto">
-                <input type="email" name="メールアドレス" size="30" class="form-control" />
-              </div>
-            </div>
-            <div class="row align-items-center pb-3 col-auto">
-              <div class="col-sm-3">
-                <h6 class="mb-0">メールアドレス(確認用)<span class="text-danger">※</span></h6>
-              </div>
-              <div class="col-auto">
-                <input type="email" name="メールアドレス確認用" size="30" class="form-control" />
-              </div>
-            </div>
-            <div class="row g-2 align-items-center pb-3 col-auto">
-              <label class="col-sm-3 col-form-label">日中連絡先</label>
-              <div class="col-auto">
-                <input type="text" name="日中連絡先" size="30" class="form-control">
-              </div>
-            </div>
-            <div class="row align-items-center pb-3 col-auto">
-              <label class="col-sm-3 col-form-label">問い合わせ種別<span class="text-danger">※</span></label>
-              <div class="col-auto">
-                <select class="form-control form-select" name="問い合わせ種別">
-                  <option value="貿易関係">貿易関係</option>
-                  <option value="お仕事を探しの方">お仕事を探しの方</option>
-                  <option value="企業のご担当の方">企業のご担当の方</option>
-                  <option value="その他問い合わせ">その他問い合わせ</option>
-                </select>
-              </div>
-            </div>
-            <div class="row align-items-center pb-3 col-auto">
-              <label class="col-sm-3 col-form-label">ご相談・お問い合わせ内容<span class="text-danger">※</span></label>
-              <div class="col-auto">
-                <textarea name="お問い合わせ詳細" cols="30" rows="10" class="form-control"></textarea>
-              </div>
-            </div>
-            <div class="row align-items-center col-auto">
-              <label class="col-sm-3 col-form-label">豊雨を知ったきっかけ</label>
-              <div class="col-auto">
-                <select class="form-control form-select" name="豊雨を知ったきっかけ">
-                  <option value="豊雨からの営業">豊雨からの営業</option>
-                  <option value="DMなど">DMなど</option>
-                  <option value="豊雨利用者・知人の紹介">豊雨利用者・知人の紹介</option>
-                  <option value="捜索エンジン">捜索エンジン</option>
-                  <option value="その他">その他</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="contact-agree" class="card bg-color mt-4 mb-3">
-          <div class="card-body">
-            <h4 class="text-center"><b>◆プライバシーポリシー</b></h4>
-            <p class="pb-2">
-              ご入力いただいきました個人情報は、当社の個人情報保護方針のもとで、厳重なセキュリティ対策を施し、適正な個人情報の管理を実施いたします。
-              </br>なお、ご入力いただきました個人情報につきましては、以下の目的で利用いたします。</p>
-            <p class="pb-1 mt-0">当社サービスに関する情報の提供・収集のため</p>
-            <p class="pb-1 mt-0">当社サービスに関する情報、セミナー、その他情報のご案内のため</p>
-            <p class="mt-0">当社のマーケティング活動における顧客分析・統計調査</p>
-            <p class="pb-1">
-              当社では、個人情報を上記に記載している利用目的の範囲内で委託先に開示する場合および法令に基づいて提供する場合を除き、あらかじめご本人から同意を得ることなく第三者に開示または提供することはありません。
-              なお、委託先に個人情報を開示する場合には、 当社が定める安全対策基準を満たす事業者を選定し、適切な管理・監督をおこないます。
-              ご登録いただく情報につきましては、皆様の自由なご判断に基づいて おこなっていただいておりますが、必要な情報をご入力いただけない場合は、
-              当社サービスに関する情報等が提供できない場合がございますのでご了承ください。
-            </p>
-            <p class="pb-2">当社の個人情報の取扱いに関する苦情、お客様ご本人の情報についての開示・訂正・削除のご依頼につきましては、「個人情報保護方針」をご覧ください。</p>
-            <a href="pri.html">個人情報保護方針</a>
-          </div>
-        </div>
-        <p class="text-center py-2"><input type="checkbox" name="agree" id="agree" onchange="ContactAgreement(this)">
-          プライバシーポリシーに同意する</p>
-        <p class="text-center">
-          <input type="submit" value="内容を確認する" class="btn btn-outline-primary text-center" id="contact-confirm"
-            disabled>
-        </p>
-      </form>
-    </div>
-  </section>
-  <!-- end contact section -->
+            </section>
 
 
-  <!-- info section -->
+            <!-- end info section -->
 
-  <section class="info_section layout_padding2">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-3 info_col">
-          <div class="info_contact">
-            <h4>
-              お問い合わせ
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  中国(上海)自由贸易试验区华申路180号1幢六层6020室
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call 021-58367307
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  info@example.com
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="info_social">
-            <a href="https://www.facebook.com/profile.php?id=100061816236948">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="https://mobile.twitter.com/toyoame">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-2 mx-auto info_col">
-          <div class="info_link_box">
-            <h4>
-              メニュー
-            </h4>
-            <div class="info_links">
-              <a class="active" href="top.html">
-                会社情報
-              </a>
-              <a class="" href="tradeAndWholesale.html">
-                貿易・卸売
-              </a>
-              <a class="" href="humanResourceServices.html">
-                人材サービス
-              </a>
-              <a class="" href="socialInitiatives.html">
-                社会への取組
-              </a>
-              <a class="" href="contactUs.html">
-                お問い合わせ
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+            <!-- footer section -->
+            <section class="footer_section">
+              <div class="container">
+                <p>
+                  &copy; <span id="displayYear"></span><strong>豊雨株式会社サイト</strong>. All Rights Reserved
+                  &copy; <span id="displayYear"></span><strong>豊雨株式会社サイト</strong>. All Rights Reserved
+                </p>
+              </div>
+            </section>
+            <!-- footer section -->
 
-  <!-- end info section -->
-
-  <!-- footer section -->
-  <section class="footer_section">
-    <div class="container">
-      <p>
-        &copy; <span id="displayYear"></span><strong>豊雨株式会社サイト</strong>. All Rights Reserved
-      </p>
-    </div>
-  </section>
-  <!-- footer section -->
-
-  <!-- jQery -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-  <!-- bootstrap js -->
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <!-- owl slider -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- custom js -->
-  <script type="text/javascript" src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
+            <!-- jQery -->
+            <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+            <!-- popper js -->
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+              integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+              crossorigin="anonymous">
+              </script>
+            <!-- bootstrap js -->
+            <script type="text/javascript" src="js/bootstrap.js"></script>
+            <!-- owl slider -->
+            <script type="text/javascript"
+              src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+              </script>
+            <!-- custom js -->
+            <script type="text/javascript" src="js/custom.js"></script>
+            <!-- Google Map -->
+            <script
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+              </script>
+            <!-- End Google Map -->
 
 </body>
 
