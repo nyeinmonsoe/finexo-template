@@ -90,7 +90,7 @@
   <section class="contact-section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
-        <h2 class="text-center pb-2">お問い合わせ</h2>
+        <h2 class="text-center pb-2">お問い <span>合わせ</span></h2>
       </div>
       <form action="mail.php" method="POST">
         <div class="card bg-color mt-10">
@@ -133,20 +133,20 @@
             <div class="row align-items-center pb-3 col-auto">
               <label class="col-sm-3 col-form-label" for="会社学校名">会社・学校名</label>
               <div class="col-auto">
-                <input type="text" name="会社学校名" size="30" class="form-control">
+                <input type="text" name="会社学校名" size="48" class="form-control">
               </div>
             </div>
             <div class="row align-items-center pb-3 col-auto">
               <label class="col-sm-3 col-form-label" for="部署役職名">部署・役職名</label>
               <div class="col-auto">
-                <input type="text" name="部署役職名" size="30" class="form-control">
+                <input type="text" name="部署役職名" size="48" class="form-control">
               </div>
             </div>
 
             <div class="row align-items-center pb-3 col-auto">
               <label class="col-sm-3 col-form-label">住所</label>
               <div class="col-auto">
-                <textarea name="住所" cols="30" rows="4" class="form-control"></textarea>
+                <textarea name="住所" cols="48" rows="4" class="form-control"></textarea>
               </div>
             </div>
             <div class="row align-items-center pb-3 col-auto">
@@ -154,7 +154,7 @@
                 <h6 class="mb-0">メールアドレス<span class="text-danger">※</span></h6>
               </div>
               <div class="col-auto">
-                <input type="email" name="メールアドレス" size="30" class="form-control" />
+                <input type="email" name="メールアドレス" size="48" class="form-control" />
               </div>
             </div>
             <div class="row align-items-center pb-3 col-auto ">
@@ -162,13 +162,13 @@
                 <h6 class="mb-0">メールアドレス(確認用)<span class="text-danger">※</span></h6>
               </div>
               <div class="col-auto">
-                <input type="email" name="メールアドレス確認用" size="30" class="form-control" />
+                <input type="email" name="メールアドレス確認用" size="48" class="form-control" />
               </div>
             </div>
             <div class="row g-2 align-items-center pb-3 col-auto">
               <label class="col-sm-3 col-form-label">日中連絡先</label>
               <div class="col-auto">
-                <input type="text" name="日中連絡先" size="30" class="form-control">
+                <input type="text" name="日中連絡先" size="48" class="form-control">
               </div>
             </div>
             <div class="row align-items-center pb-3 col-auto">
@@ -185,7 +185,7 @@
             <div class="row align-items-center pb-3 col-auto">
               <label class="col-sm-3 col-form-label">ご相談・お問い合わせ内容<span class="text-danger">※</span></label>
               <div class="col-auto">
-                <textarea name="お問い合わせ詳細" cols="30" rows="10" class="form-control"></textarea>
+                <textarea name="お問い合わせ詳細" cols="48" rows="10" class="form-control"></textarea>
               </div>
             </div>
             <div class="row align-items-center col-auto">
@@ -217,8 +217,9 @@
               ご登録いただく情報につきましては、皆様の自由なご判断に基づいて おこなっていただいておりますが、必要な情報をご入力いただけない場合は、
               当社サービスに関する情報等が提供できない場合がございますのでご了承ください。
             </p>
-            <p class="pb-2">当社の個人情報の取扱いに関する苦情、お客様ご本人の情報についての開示・訂正・削除のご依頼につきましては、「個人情報保護方針」をご覧ください。</p>
-            <a href="pri.html">個人情報保護方針</a>
+            <p class="pb-2">
+              当社の個人情報の取扱いに関する苦情、お客様ご本人の情報についての開示・訂正・削除のご依頼につきましては、<a href="pri.html">「個人情報保護方針」</a>をご覧ください。
+            </p>
           </div>
         </div>
         <p class="text-center py-2"><input type="checkbox" name="agree" id="agree" onchange="ContactAgreement(this)">
