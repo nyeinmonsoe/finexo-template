@@ -32,12 +32,6 @@
 
 }
 
-@media (max-width: 1024px) {
-  .team_section .team_container .box .detail-box {
-    height: 200px;
-  }
-}
-
 @media (max-width: 768px) {
   .about_section .img-box {
     margin-bottom: 45px;
