@@ -539,16 +539,33 @@ a:focus {
   border-left: 3px solid white;
   padding-left: 7px;
   font-weight: bold;
+  margin-bottom: 20px !important;
+  line-height: 2.5;
+}
+.business-content{
+  line-height: 2.5;
 }
 .heading_container heading_center{
   line-height: 2;
 }
-.map_block{
-background-color: #f8f8f9;
+.box{
+  background-color: #f8f8f9;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: left !important;
 }
 .map_image{
   height: 170px;
-
+  color: black;
+}
+.about-compInfo{
+  padding: 20px;
+}
+.comp-history{
+  padding: 10px 60px 0 50px;
+}
+.compInfo-padding {
+  padding: 0 30px 0 30px;
 }
 .name {
   font-weight: bold;
@@ -612,6 +629,9 @@ div {
   font-size:24px;
   color:#00bbf0;
   margin-left: 10px;
+}
+.activity-item{
+  text-align: left !important;
 }
 
 .why_section .box {
