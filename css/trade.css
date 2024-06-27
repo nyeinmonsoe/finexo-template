@@ -1,0 +1,80 @@
+.trade_overview {
+    padding: 70px 0;
+}
+.trade_overview .why_container {
+    background: #f8f8f9;
+    padding: 30px;
+}
+.business_section .team_container .box {
+    padding: 35px 20px 10px 20px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3580e1), to(#2d6dc2));
+    background: linear-gradient(to bottom, #3580e1, #2d6dc2);
+}
+.business_section .team_container .box .detail-box {
+    height: 165px;
+}
+.business_section .team_container .box .detail-box h5 {
+    color: #fff;
+}
+.exhibition_section .box{
+    margin-top: 22px;
+}
+.exhibition_section .box-01{
+    align-items: flex-start;
+}
+.exhibition_section .box-03{
+    align-items: flex-end;
+}
+.exhibition_section .box-01{
+    align-items: flex-start;
+}
+.exh-box h4 {
+    border-left: 3px solid #126199;
+    padding-left: 15px;
+}
+
+.exh-img-box img {
+    width: 300px;
+    height: 250px;
+    max-width: 100%;
+}
+.region-img-box img {
+    width: 100%;
+    height: 450px;
+}
+.brand_section {
+    background: #ecf5ff;
+}
+/* Zoom In #brand-image */
+.brand-img-box,.brand-img-box figure {
+    width: 177px;
+}
+.brand-img-box figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.brand-img-box figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+@media (max-width: 1199px) {
+    .brand-img-box figure img {
+      width: 138px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .business_section .team_container .box .detail-box {
+      height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .exh-img-box:first-child {
+        align-items: center;
+    }
+}

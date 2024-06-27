@@ -21,37 +21,46 @@
 .business-block .img-box img{
     height: 300px;
 }
-/*一覧ページの各物件ボックス内のテーブル
+/*荳�隕ｧ繝壹�ｼ繧ｸ縺ｮ蜷�迚ｩ莉ｶ繝懊ャ繧ｯ繧ｹ蜀�縺ｮ繝�繝ｼ繝悶Ν
 ---------------------------------------------------------------------------*/
 .list table.c2 {
-	font-size: 12px;	/*文字サイズ*/
-	width: 100%;		/*テーブル幅*/
+    font-size: 1rem;	/*隴�ｿｽ陝�蜉ｱ縺礼ｹｧ�ｽ､郢ｧ�ｽｺ*/
+	width: 100%;		/*繝�繝ｼ繝悶Ν蟷�*/
 	margin-bottom: 5px;
+    
 }
 .list table.c2,
 .list table.c2 td,
 .list table.c2 th {
-	border: 1px solid #dcdcdc;	/*枠線の幅、線種、色*/
+	border: 1px solid #ffffff;	/*譫�邱壹�ｮ蟷�縲∫ｷ夂ｨｮ縲∬牡*/
 }
 .list table.c2 td,
 .list table.c2 th {
-	padding: 1%;	/*テーブル内の余白*/
+	padding: 1%;	/*繝�繝ｼ繝悶Ν蜀�縺ｮ菴咏區*/
 }
 .list table.c2 th {
-	width: 20%;		/*幅*/
-	background: #fafafa;	/*背景色*/
+	width: 20%;		/*蟷�*/
+	background: #126199;	/*閭梧勹濶ｲ*/
+    color: #ffffff;
 }
 .list table.c2 td {
-	width: 30%;		/*幅*/
+	width: 30%;		/*蟷�*/
 }
-@media (max-width: 1120px) {
+@media (max-width: 1300px) {
     .service_section .box button {
         font-size: 15px;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 992px) {
+    .service_section .box button {
+        font-size: 11px;
+       
     }
 }
 @media (max-width: 480px) {
     .service_section .box button {
         font-size: 12px;
     }
-  
   }
