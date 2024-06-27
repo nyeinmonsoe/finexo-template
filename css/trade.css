@@ -34,9 +34,9 @@
 }
 
 .exh-img-box img {
-    width: 300px;
+    /* width: 300px; */
     height: 250px;
-    max-width: 100%;
+    width: 100%;
 }
 .region-img-box img {
     width: 100%;
