@@ -556,7 +556,10 @@ a:focus {
 .heading_container heading_center{
   line-height: 2;
 }
-.box{
+.ceo-name{
+  text-align: end;
+}
+.box-map{
   background-color: #f8f8f9;
   padding: 20px;
   border-radius: 5px;
@@ -630,8 +633,10 @@ div {
   color: rgba(var(--bs-success-rgb), var(--bs-text-opacity)) !important;
 }
 
-.about_section_top .img-box img {
+.about_section .img-box img {
   max-width: 100%;
+  max-height: 460px;
+  width: 100%;
 }
 .activity-item a{
   font-size:24px;
