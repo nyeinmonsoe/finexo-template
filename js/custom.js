@@ -66,3 +66,25 @@ function scrollToTop() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+function ContactAgreement(checkbox) {
+    var button = document.getElementById("contact-confirm");
+      
+    if (checkbox.checked) {
+        button.disabled = false;
+    } else {
+        button.disabled = true;
+    }
+}
+
+  // Function to update the submit button state
+  function updateSubmitButtonState() {
+    const checkbox = document.getElementById('agree');
+    const submitButton = document.getElementById('contact-confirm');
+    submitButton.disabled = checkbox.checked;
+}
+
+
+
+document.addEventListener('DOMContentLoaded', updateSubmitButtonState);
+document.addEventListener('pageshow', updateSubmitButtonState);
