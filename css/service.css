@@ -46,9 +46,17 @@
 .list table.c2 td {
 	width: 30%;		/*蟷�*/
 }
-@media (max-width: 1120px) {
+@media (max-width: 1300px) {
     .service_section .box button {
         font-size: 15px;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 992px) {
+    .service_section .box button {
+        font-size: 11px;
+       
     }
 }
 @media (max-width: 480px) {
