@@ -121,12 +121,6 @@
     }
 }
 
-/* @media (max-width: 1141px) {
-    .business_section .team_container .box .detail-box {
-      height: 200px;
-    }
-} */
-
 @media (max-width: 768px) {
     .exh-img-box:first-child {
         align-items: center;
