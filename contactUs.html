@@ -95,9 +95,9 @@
         </div>
         <form action="mail.php" method="POST">
           <div class="card bg-color mt-10">
-            <div class="card-body">
-              <div class="row pb-3 align-items-center col-auto">
-                <label class="col-sm-5 col-form-label text-nowrap">お名前（漢字）<span class="text-danger">※</span></label>
+            <div class="card-body col-auto">
+              <div class="row pb-3 card-group">
+                <label class="col-sm-4 col-form-label text-nowrap">お名前（漢字）<span class="text-danger">※</span></label>
                 <div class="row col-auto">
                   <div class="col-auto">
                     <div data-mdb-input-init class="form-outline">
@@ -114,8 +114,8 @@
                   </div>
                 </div>
               </div>
-              <div class="row pb-3 align-items-center col-auto">
-                <label class="col-sm-5 col-form-label text-nowrap">お名前（かな）<span class="text-danger">※</span></label>
+              <div class="row pb-3 card-group">
+                <label class="col-sm-4 col-form-label text-nowrap">お名前（かな）<span class="text-danger">※</span></label>
                 <div class="row col-auto">
                   <div class="col-auto">
                     <div data-mdb-input-init class="form-outline">
@@ -131,49 +131,49 @@
                   </div>
                 </div>
               </div>
-              <div class="row align-items-center pb-3 col-auto">
-                <label class="col-sm-5 col-form-label" for="会社学校名">会社・学校名</label>
+              <div class="row pb-3 card-group">
+                <label class="col-sm-4 col-form-label" for="会社学校名">会社・学校名</label>
                 <div class="col-auto">
                   <input type="text" name="会社学校名" size="48" class="form-control">
                 </div>
               </div>
-              <div class="row align-items-center pb-3 col-auto">
-                <label class="col-sm-5 col-form-label text-nowrap" for="部署役職名">部署・役職名</label>
+              <div class="row pb-3 card-group">
+                <label class="col-sm-4 col-form-label text-nowrap" for="部署役職名">部署・役職名</label>
                 <div class="col-auto">
                   <input type="text" name="部署役職名" size="48" class="form-control">
                 </div>
               </div>
 
-              <div class="row align-items-center pb-3 col-auto">
-                <label class="col-sm-5 col-form-label text-nowrap">住所 <span class="text-danger">※</span></label>
+              <div class="row align-items-center pb-3 card-group">
+                <label class="col-sm-4 col-form-label text-nowrap">住所 <span class="text-danger">※</span></label>
                 <div class="col-auto">
                   <textarea name="住所" cols="48" rows="4" class="form-control"></textarea>
                 </div>
               </div>
-              <div class="row align-items-center pb-3 col-auto">
-                <div class="col-sm-5">
+              <div class="row pb-3 card-group">
+                <div class="col-sm-4">
                   <label class="mb-0 col-form-label text-nowrap">メールアドレス <span class="text-danger">※</span></label>
                 </div>
                 <div class="col-auto">
                   <input type="email" name="メールアドレス" size="48" class="form-control" />
                 </div>
               </div>
-              <div class="row align-items-center pb-3 col-auto">
-                <div class="col-sm-5">
+              <div class="row pb-3 card-group">
+                <div class="col-sm-4">
                   <label class="mb-0 col-form-label text-nowrap">メールアドレス(確認用) <span class="text-danger">※</span></label>
                 </div>
                 <div class="col-auto">
                   <input type="email" name="メールアドレス確認用" size="48" class="form-control" />
                 </div>
               </div>
-              <div class="row g-2 align-items-center pb-3 col-auto">
-                <label class="col-sm-5 col-form-label text-nowrap">日中連絡先</label>
+              <div class="row pb-3 card-group">
+                <label class="col-sm-4 col-form-label text-nowrap">日中連絡先</label>
                 <div class="col-auto">
                   <input type="text" name="日中連絡先" size="48" class="form-control">
                 </div>
               </div>
-              <div class="row align-items-center pb-3 col-auto">
-                <label class="col-sm-5 col-form-label text-nowrap">問い合わせ種別 <span class="text-danger">※</span></label>
+              <div class="row pb-3 card-group">
+                <label class="col-sm-4 col-form-label text-nowrap">問い合わせ種別 <span class="text-danger">※</span></label>
                 <div class="col-auto">
                   <select class="form-control form-select" name="問い合わせ種別">
                     <option value="貿易関係">貿易関係</option>
@@ -183,15 +183,15 @@
                   </select>
                 </div>
               </div>
-              <div class="row align-items-center pb-3 col-auto">
-                <label class="col-sm-5 col-form-label text-nowrap">ご相談・お問い合わせ内容 <span
+              <div class="row align-items-center pb-3 card-group">
+                <label class="col-sm-4 col-form-label text-nowrap">ご相談・お問い合わせ内容 <span
                     class="text-danger">※</span></label>
                 <div class="col-auto">
                   <textarea name="お問い合わせ詳細" cols="48" rows="10" class="form-control"></textarea>
                 </div>
               </div>
-              <div class="row align-items-center col-auto">
-                <label class="col-sm-5 col-form-label text-nowrap">豊雨を知ったきっかけ</label>
+              <div class="row card-group">
+                <label class="col-sm-4 col-form-label text-nowrap">豊雨を知ったきっかけ</label>
                 <div class="col-auto">
                   <select class="form-control form-select" name="豊雨を知ったきっかけ">
                     <option value="豊雨からの営業">豊雨からの営業</option>
@@ -229,7 +229,7 @@
             プライバシーポリシーに同意する</p>
           <p class="text-center">
             <input type="submit" value="内容を確認する" class="btn btn-outline-primary text-center" id="contact-confirm"
-              disabled>
+              >
           </p>
         </form>
       </div>
