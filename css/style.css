@@ -539,45 +539,56 @@ a:focus {
   -ms-flex-align: center;
   align-items: center;
 }
-.about_section_top p{
+
+.about_section_top p {
   padding: 0px 20px 20px;
   line-height: 2;
 }
-.company-overview{
+
+.company-overview {
   border-left: 3px solid white;
   padding-left: 7px;
   font-weight: bold;
   margin-bottom: 20px !important;
   line-height: 2.5;
 }
-.business-content{
+
+.business-content {
   line-height: 2.5;
 }
-.heading_container heading_center{
+
+.heading_container heading_center {
   line-height: 2;
 }
-.ceo-name{
+
+.ceo-name {
   text-align: end;
 }
-.box-map{
+
+.box-map {
   background-color: #f8f8f9;
   padding: 20px;
   border-radius: 5px;
   text-align: left !important;
 }
-.map_image{
+
+.map_image {
   height: 170px;
   color: black;
 }
-.about-compInfo{
+
+.about-compInfo {
   padding: 20px;
 }
-.comp-history{
+
+.comp-history {
   padding: 10px 60px 0 50px;
 }
+
 .compInfo-padding {
   padding: 0 30px 0 30px;
 }
+
 .name {
   font-weight: bold;
   font-size: xx-large;
@@ -586,48 +597,58 @@ a:focus {
 .d-flex {
   display: flex !important;
 }
+
 div {
   display: block;
   unicode-bidi: isolate;
 }
+
 .activity .activity-item .activite-label {
   position: relative;
   flex-shrink: 0;
   flex-grow: 0;
   min-width: 64px;
 }
-*, ::after, ::before {
+
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
+
 .activity .activity-item .activity-badge {
   margin-top: 3px;
   z-index: 1;
   font-size: 11px;
-  
+
   border-radius: 50%;
   flex-shrink: 0;
   flex-grow: 0;
 }
+
 .activity .activity-item .activite-label::before {
   content: "";
   position: absolute;
   right: -11px;
   width: 4px;
   top: 0;
-  bottom: -6px;  
+  bottom: -6px;
   background-color: #eceefe;
   margin-top: 6px;
 }
+
 .activity .activity-item .activite-label {
   position: relative;
   flex-shrink: 0;
   flex-grow: 0;
   min-width: 100px;
 }
+
 .activity .activity-item .activity-content {
   padding-left: 10px;
   padding-bottom: 20px;
 }
+
 .text-success {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-success-rgb), var(--bs-text-opacity)) !important;
@@ -638,12 +659,14 @@ div {
   max-height: 460px;
   width: 100%;
 }
-.activity-item a{
-  font-size:24px;
-  color:#00bbf0;
+
+.activity-item a {
+  font-size: 24px;
+  color: #00bbf0;
   margin-left: 10px;
 }
-.activity-item{
+
+.activity-item {
   text-align: left !important;
 }
 
@@ -1121,3 +1144,16 @@ div {
 }
 
 /*# sourceMappingURL=style.css.map */
+/*# Start - お問い 合わせ Ansurs-西川さん */
+
+@media (min-width: 992px) {
+  .lbl-name {
+    padding-top: 38px;
+  }
+
+  .select-form {
+    width: 460px;
+  }
+}
+
+/* End - お問い 合わせ Ansurs-西川さん */
