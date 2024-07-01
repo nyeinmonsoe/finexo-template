@@ -1,0 +1,20 @@
+.service_section .box .img-box {
+    width: 100% !important;
+    height: unset !important;
+    margin-top: 7px;
+}
+
+.service_section .box {
+    align-items: start !important;
+    text-align: left !important;
+}
+.service_section .box h5 {
+    font-weight: bold;
+}
+.service_section .box span {
+    color: grey;
+}
+.service_section .box button {
+    color: black;
+    font-size: 10px;
+}

@@ -199,93 +199,37 @@ if(empty($errm)){
 ?>
 
 <!DOCTYPE html>
-<html lang="ja">
+<html>
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>ポータルサイト向け 無料ホームページテンプレート tp_portal1</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="ここにサイト説明を入れます">
-<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
-<!-- bootstrap core css -->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#header').empty();
+    $('#footer').empty();
+    $('#header').load("header.html");
+    $('#footer').load("footer.html");
+  });
+</script>
+<body class="sub_page">
+    <div id="header">
 
-<!-- fonts style -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-
-<!--owl slider stylesheet -->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-<!-- font awesome style -->
-<link href="css/font-awesome.min.css" rel="stylesheet" />
-
-<!-- Custom styles for this template -->
-<link href="css/style.css" rel="stylesheet" />
-<!-- responsive style -->
+    </div>
 <link href="css/confirmationScreen.css" rel="stylesheet" />
 <link href="css/responsive.css" rel="stylesheet" />
 <script src="js/openclose.js"></script>
 <script src="js/fixmenu.js"></script>
 <script src="js/fixmenu_pagetop.js"></script>
 <script src="js/ddmenu_min.js"></script>
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
-</head>
-
-<body class="sub_page">
-
-<div class="hero_area">
-
-<div class="hero_bg_box">
-  <div class="bg_img_box">
-    <img src="images/hero-bg.png" alt="">
-  </div>
-</div>
-
-  <!-- header section strats -->
-  <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <img id="logo-size" src="img/logo-white.png" alt="">
-          <a class="navbar-brand" href="top.html">
-            <span>
-              豊　雨　株　式　会　社
-            </span>
-          </a>
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=""> </span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  ">
-              <li class="nav-item active">
-                <a class="nav-link" href="top.html">会社情報 </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="tradeAndWholesale.html"> 貿易・卸売</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="humanResourceServices.html">人材サービス<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="socialInitiatives.html">社会への取組</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contactUs.html">お問い合わせ</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-  </div>
-
-
-
 <div id="contents" class="inner">
 
 <div id="contents-in">
@@ -391,85 +335,12 @@ else if($confirmDsp == 1){
             <!--/contents-->
             
           
-        <!-- info section -->
+<!-- footer section -->
+ <div id="footer">
 
-  <section class="info_section layout_padding2">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-3 info_col">
-          <div class="info_contact">
-            <h4>
-              お問い合わせ
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  中国(上海)自由贸易试验区华申路180号1幢六层6020室
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call 021-58367307
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  info@example.com
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="info_social">
-            <a href="https://www.facebook.com/profile.php?id=100061816236948">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="https://mobile.twitter.com/toyoame">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-2 mx-auto info_col">
-          <div class="info_link_box">
-            <h4>
-              メニュー
-            </h4>
-            <div class="info_links">
-              <a class="active" href="top.html">
-                会社情報
-              </a>
-              <a class="" href="tradeAndWholesale.html">
-                貿易・卸売
-              </a>
-              <a class="" href="humanResourceServices.html">
-                人材サービス
-              </a>
-              <a class="" href="socialInitiatives.html">
-                社会への取組
-              </a>
-              <a class="" href="contactUs.html">
-                お問い合わせ
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+</div>
 
-  <!-- end info section -->      
-         
-  <!-- footer section -->
-  <section class="footer_section">
-    <div class="container">
-      <p>
-        &copy; <span id="displayYear"></span><strong>豊雨株式会社サイト</strong>.  All Rights Reserved
-      </p>
-    </div>
-  </section>
-  <!-- footer section -->
+<!-- footer section -->
             <script>
             if (OCwindowWidth() <= 900) {
                 open_close("menubar_hdr", "menubar-s");

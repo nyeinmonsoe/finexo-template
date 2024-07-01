@@ -64,6 +64,7 @@
     position: unset;
     margin: 0 2.5px;
   }
+  
 }
 
 @media (max-width: 480px) {
@@ -83,6 +84,9 @@
   .track_section form button {
     padding: 10px 60px;
     margin-top: 10px;
+  }
+  .navbar-brand .company_name {
+    font-size: 20px !important;
   }
 }
 
