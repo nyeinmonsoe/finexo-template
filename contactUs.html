@@ -11,19 +11,20 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-<script>
-  $(document).ready(function () {
-    $('#header').empty();
-    $('#footer').empty();
-    $('#header').load("header.html");
-    $('#footer').load("footer.html");
-  });
-</script>
-<body class="sub_page">
-    <div id="header">
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#header').empty();
+      $('#footer').empty();
+      $('#header').load("header.html");
+      $('#footer').load("footer.html");
+    });
+  </script>
 
-    </div>
+<body class="sub_page">
+  <div id="header">
+
+  </div>
 
   <!-- contact section -->
   <section class="contact-section layout_padding">
@@ -36,65 +37,64 @@
           <div class="card bg-color mt-10">
             <div class="card-body col-auto">
               <div class="row pb-3 card-group">
-                <label class="col-sm-4 col-form-label text-nowrap">お名前（漢字）<span class="text-danger">※</span></label>
+                <label class="col-sm-4 col-form-label text-nowrap lbl-name">お名前（漢字）<span
+                    class="text-danger">※</span></label>
                 <div class="row col-auto">
-                  <div class="col-auto">
-                    <div data-mdb-input-init class="form-outline">
-                      <label class="form-label" for="お名前姓">姓</label>
-                      <input type="text" name="お名前姓" class="form-control" />
+                  <div data-mdb-input-init class="form-outline col-auto">
+                    <label class="form-label" for="お名前姓">姓</label>
+                    <div class="pr-3">
+                      <input type="text" name="お名前姓" size="20" class="form-control" />
                     </div>
                   </div>
 
-                  <div class="col-auto">
-                    <div data-mdb-input-init class="form-outline">
-                      <label class="form-label" for="お名前名">名</label>
-                      <input type="text" name="お名前名" class="form-control" />
-                    </div>
+                  <div data-mdb-input-init class="form-outline col-auto">
+                    <label class="form-label" for="お名前名">名</label>
+                    <input type="text" name="お名前名" class="form-control" />
                   </div>
                 </div>
               </div>
               <div class="row pb-3 card-group">
-                <label class="col-sm-4 col-form-label text-nowrap">お名前（かな）<span class="text-danger">※</span></label>
+                <label class="col-sm-4 col-form-label text-nowrap lbl-name">お名前（かな）<span
+                    class="text-danger">※</span></label>
                 <div class="row col-auto">
-                  <div class="col-auto">
-                    <div data-mdb-input-init class="form-outline">
-                      <label class="form-label" for="ふりがな姓">姓</label>
+                  <div data-mdb-input-init class="form-outline col-auto">
+                    <label class="form-label" for="ふりがな姓">姓</label>
+                    <div class="pr-3">
                       <input type="text" name="ふりがな姓" class="form-control" />
                     </div>
                   </div>
-                  <div class="col-auto">
-                    <div data-mdb-input-init class="form-outline">
-                      <label class="form-label" for="ふりがな名">名</label>
-                      <input type="text" name="ふりがな名" class="form-control" />
-                    </div>
+                  <div data-mdb-input-init class="form-outline col-auto">
+                    <label class="form-label" for="ふりがな名">名</label>
+                    <input type="text" name="ふりがな名" size="20" class="form-control" />
                   </div>
                 </div>
               </div>
               <div class="row pb-3 card-group">
                 <label class="col-sm-4 col-form-label" for="会社学校名">会社・学校名</label>
                 <div class="col-auto">
-                  <input type="text" name="会社学校名" size="48" class="form-control">
+                  <input type="text" name="会社学校名" size="50" class="form-control">
                 </div>
               </div>
               <div class="row pb-3 card-group">
                 <label class="col-sm-4 col-form-label text-nowrap" for="部署役職名">部署・役職名</label>
                 <div class="col-auto">
-                  <input type="text" name="部署役職名" size="48" class="form-control">
+                  <input type="text" name="部署役職名" size="50" class="form-control">
                 </div>
               </div>
 
               <div class="row align-items-center pb-3 card-group">
                 <label class="col-sm-4 col-form-label text-nowrap">住所 <span class="text-danger">※</span></label>
                 <div class="col-auto">
-                  <textarea name="住所" cols="48" rows="4" class="form-control"></textarea>
+                  <textarea name="住所" cols="49" rows="4" size="50" class="form-control"></textarea>
                 </div>
               </div>
+
               <div class="row pb-3 card-group">
                 <div class="col-sm-4">
                   <label class="mb-0 col-form-label text-nowrap">メールアドレス <span class="text-danger">※</span></label>
                 </div>
                 <div class="col-auto">
-                  <input type="email" name="メールアドレス" size="48" class="form-control" />
+                  <input type="email" name="メールアドレス" size="50" class="form-control" />
                 </div>
               </div>
               <div class="row pb-3 card-group">
@@ -102,19 +102,19 @@
                   <label class="mb-0 col-form-label text-nowrap">メールアドレス(確認用) <span class="text-danger">※</span></label>
                 </div>
                 <div class="col-auto">
-                  <input type="email" name="メールアドレス確認用" size="48" class="form-control" />
+                  <input type="email" name="メールアドレス確認用" size="50" class="form-control" />
                 </div>
               </div>
               <div class="row pb-3 card-group">
                 <label class="col-sm-4 col-form-label text-nowrap">日中連絡先</label>
                 <div class="col-auto">
-                  <input type="text" name="日中連絡先" size="48" class="form-control">
+                  <input type="text" name="日中連絡先" size="50" class="form-control">
                 </div>
               </div>
               <div class="row pb-3 card-group">
                 <label class="col-sm-4 col-form-label text-nowrap">問い合わせ種別 <span class="text-danger">※</span></label>
                 <div class="col-auto">
-                  <select class="form-control form-select" name="問い合わせ種別">
+                  <select class="form-control form-select select-form" name="問い合わせ種別" width="440px">
                     <option value="貿易関係">貿易関係</option>
                     <option value="お仕事を探しの方">お仕事を探しの方</option>
                     <option value="企業のご担当の方">企業のご担当の方</option>
@@ -126,13 +126,13 @@
                 <label class="col-sm-4 col-form-label text-nowrap">ご相談・お問い合わせ内容 <span
                     class="text-danger">※</span></label>
                 <div class="col-auto">
-                  <textarea name="お問い合わせ詳細" cols="48" rows="10" class="form-control"></textarea>
+                  <textarea name="お問い合わせ詳細" cols="49" rows="10" size="50" class="form-control"></textarea>
                 </div>
               </div>
               <div class="row card-group">
                 <label class="col-sm-4 col-form-label text-nowrap">豊雨を知ったきっかけ</label>
                 <div class="col-auto">
-                  <select class="form-control form-select" name="豊雨を知ったきっかけ">
+                  <select class="form-control form-select select-form" name="豊雨を知ったきっかけ">
                     <option value="豊雨からの営業">豊雨からの営業</option>
                     <option value="DMなど">DMなど</option>
                     <option value="豊雨利用者・知人の紹介">豊雨利用者・知人の紹介</option>
@@ -175,12 +175,12 @@
   </section>
   <!-- end contact section -->
 
- <!-- footer section -->
- <div id="footer">
+  <!-- footer section -->
+  <div id="footer">
 
- </div>
+  </div>
 
- <!-- footer section -->
+  <!-- footer section -->
 </body>
 
 </html>
