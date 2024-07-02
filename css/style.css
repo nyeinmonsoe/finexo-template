@@ -984,7 +984,11 @@ div {
   color: #ffffff;
   border-radius: 100%;
   margin-right: 10px;
-  font-size: 24px;
+  font-size: 35px;
+}
+.info_social img {
+    width: 70px;
+    height: 70px;
 }
 
 .info_section .info_social a:hover {
