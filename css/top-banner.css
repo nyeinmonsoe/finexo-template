@@ -1,0 +1,33 @@
+.fables-after-overlay {
+    position: relative;
+}
+.fables-second-border-color {
+    border-color: #00bbf0 !important;
+}
+.fables-page-title {
+    color: #fff;
+    border-left-style: solid;
+    border-left-width: 9px;
+    z-index: 1;
+    position: relative;
+    padding-left: 16px;
+    margin-top: 108px;
+    line-height: 80px;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 47px;
+}
+
+.fables-header {
+    padding: 33px 0;
+    background-image: url(../img/subBanner.jpg);
+}
+.fables-after-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1261999c;
+}
