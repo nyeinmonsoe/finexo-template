@@ -221,9 +221,12 @@ if(empty($errm)){
   });
 </script>
 <body class="sub_page">
-    <div id="header">
-
+    <div id="header"></div>
+    <div class="fables-header fables-after-overlay">
+    <div class="container">
+      <h2 class="fables-page-title fables-second-border-color">お問い合わせ-確認画面</h2>
     </div>
+  </div>
 <link href="css/confirmationScreen.css" rel="stylesheet" />
 <link href="css/responsive.css" rel="stylesheet" />
 <script src="js/openclose.js"></script>
