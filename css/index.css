@@ -38,8 +38,7 @@
   height: unset !important;
 }
 .team_section {
-  background-color: #ffffff;
-  color: #393a3c;
+  color: #ffffff;
 }
 .about-our .second_block{
   text-align: left;
@@ -87,7 +86,7 @@
   margin-top: 5px;
 }
 .team_section .team_container .box .detail-box h5 {
-  color: black;
+  color: #ffffff;
 
 }
 .team_section .team_container .box .detail-box h5::before {
@@ -190,6 +189,23 @@
   font-weight: bold;
   font-size: 32px;
   width: 258px;
+}
+.activity .activity-item .activite-label::before {
+  display: none;
+}
+.activity-item {
+  border-bottom: solid #ccc 1px;
+  margin-top: 20px;
+}
+.newicon {
+  background: #F00;
+  color: #FFF;
+  font-size: 70%;
+  line-height: 1.5;
+  padding: 2px 5px;
+  border-radius: 2px;
+  margin: 0px 5px;
+  vertical-align: text-top;
 }
 @media (max-width: 992px) {
   .about-our .content {
