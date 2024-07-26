@@ -176,6 +176,7 @@
 }
 .first_slide .detail-box{
   color: #1b1464;
+  padding-right: 20px;
 }
 .carousel-inner{
   display: flex;
