@@ -986,9 +986,10 @@ div {
   margin-right: 10px;
   font-size: 35px;
 }
+
 .info_social img {
-    width: 70px;
-    height: 70px;
+  width: 70px;
+  height: 70px;
 }
 
 .info_section .info_social a:hover {
@@ -1167,3 +1168,20 @@ div {
 }
 
 /* End - お問い 合わせ Ansurs-西川さん */
+
+/* Start - 人材サービス　Ansurs-西川さん */
+.bg-fcf {
+  background-color: #FFCCFF;
+}
+
+.bg-6cf {
+  background-color: #66CCFF;
+}
+
+.bg-36f {
+  background-color: #3366FF;
+}
+
+.align-center {
+  align-items: center;
+}
