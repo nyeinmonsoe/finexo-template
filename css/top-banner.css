@@ -22,6 +22,24 @@
     padding: 33px 0;
     background-image: url(../img/subBanner.jpg);
 }
+.fables-header-cominfo {
+    padding: 33px 0;
+    background-image: url(../img/compInfo.png);
+}
+.fables-header-humanresource {
+    padding: 33px 0;
+    background-image: url(../img/humanresource.png);
+}
+.fables-header-society {
+    padding: 33px 0;
+    background-image: url(../img/society.png);
+    background-size: 100% 100%;
+}
+.fables-header-contactus {
+    padding: 33px 0;
+    background-image: url(../img/contactus.png);
+    background-size: 100% 100%;
+}
 .fables-after-overlay::after {
     content: "";
     position: absolute;

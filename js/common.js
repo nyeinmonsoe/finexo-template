@@ -14,5 +14,13 @@ $(function () {
         var pagename = page.split(".")
         $('#'+pagename[0]).addClass("active");
       }
-      
+      $('#loader-bg').css("display","block");
+      $('#loader').css("display","block");
+      $('.load-on').css("display","block");
+      setTimeout('stopload()',1000);
   })
+  
+function stopload(){
+  $('#loader-bg').delay(900).fadeOut(800);
+  $('#loader').delay(600).fadeOut(300);
+}
