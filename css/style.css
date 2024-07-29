@@ -1163,6 +1163,7 @@ div {
   background: #fff;
   z-index: 10000;
 }
+
 #loader {
   position: fixed;
   top: 50%;
@@ -1179,13 +1180,19 @@ div {
     width: 30vw;
     height: 30vw;
     margin-left: -15vw;
-    margin-top: -15vw; } }
+    margin-top: -15vw;
+  }
+}
 
 @keyframes rotation {
   from {
-  transform: rotate(0deg); }
-to {
-  transform: rotate(360deg); } }
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
 /*# Start - お問い 合わせ Ansurs-西川さん */
@@ -1212,7 +1219,7 @@ to {
 }
 
 .bg-36f {
-  background-color: #3366FF;
+  background-color: #75A9FF;
 }
 
 .align-center {
