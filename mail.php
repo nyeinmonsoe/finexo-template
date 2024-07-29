@@ -321,10 +321,6 @@ if(empty($errm)){
   </div>
 <link href="css/confirmationScreen.css" rel="stylesheet" />
 <link href="css/responsive.css" rel="stylesheet" />
-<script src="js/openclose.js"></script>
-<script src="js/fixmenu.js"></script>
-<script src="js/fixmenu_pagetop.js"></script>
-<script src="js/ddmenu_min.js"></script>
 <div id="contents" class="inner">
 
 <div id="contents-in">
@@ -533,7 +529,7 @@ else if($confirmDsp == 1){
       <!-- footer section -->
 
       <!-- The "UP" button -->
-      <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">
+      <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top" class="btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
           viewBox="0 0 16 16">
           <path fill-rule="evenodd"
