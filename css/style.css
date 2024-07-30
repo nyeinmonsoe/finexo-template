@@ -1175,6 +1175,14 @@ div {
   animation: 7s linear infinite rotation;
 }
 
+.info_detail a{
+  color:#ffffff !important;
+}
+
+.info_detail a:hover{
+  color: #00bbf0 !important;
+}
+
 @media screen and (max-width: 750px) {
   #loader {
     width: 30vw;
