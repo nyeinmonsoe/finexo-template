@@ -451,12 +451,6 @@ else if($confirmDsp == 1){
                       Call 021-58367307
                     </span>
                   </a>
-                  <a href="">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <span>
-                      info@example.com
-                    </span>
-                  </a>
                 </div>
               </div>
               <div class="info_social">
