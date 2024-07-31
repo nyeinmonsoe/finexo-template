@@ -17,7 +17,7 @@
 #
 ##-----------------------------------------------------------------------------------------------------------------##
 if (version_compare(PHP_VERSION, '5.1.0', '>=')) {//PHP5.1.0以上の場合のみタイムゾーンを定義
-    date_default_timezone_set('Asia/Tokyo');//タイムゾーンの設定（日本以外の場合には適宜設定ください）
+  date_default_timezone_set('Asia/Tokyo');//タイムゾーンの設定（日本以外の場合には適宜設定ください）
 }
 /*-------------------------------------------------------------------------------------------------------------------
 * ★以下設定時の注意点　
@@ -87,7 +87,7 @@ $requireCheck = 1;
 
 /* 必須入力項目(入力フォームで指定したname属性の値を指定してください。（上記で1を設定した場合のみ）
 値はシングルクォーテーションで囲み、複数の場合はカンマで区切ってください。フォーム側と順番を合わせると良いです */
-$require = array('問い合わせ種別','住所','お名前姓','お名前名','ふりがな姓','ふりがな名','メールアドレス','メールアドレス確認用','お問い合わせ詳細');
+$require = array('問い合わせ種別', '住所', 'お名前姓', 'お名前名', 'ふりがな姓', 'ふりがな名', 'メールアドレス', 'メールアドレス確認用', 'お問い合わせ詳細');
 
 
 //----------------------------------------------------------------------
@@ -109,7 +109,7 @@ $re_subject = "お問い合わせ、ありがとうございました";
 $dsp_name = 'お名前';
 
 //自動返信メールの冒頭の文言 ※日本語部分のみ変更可
-$remail_text = <<< TEXT
+$remail_text = <<<TEXT
 
 お問い合わせありがとうございました。
 早急にご返信致しますので今しばらくお待ちください。
@@ -123,7 +123,7 @@ TEXT;
 $mailFooterDsp = 0;
 
 //上記で「1」を選択時に表示する署名（フッター）（FOOTER～FOOTER;の間に記述してください）
-$mailSignature = <<< FOOTER
+$mailSignature = <<<FOOTER
 
 ──────────────────────
 株式会社アンスール
@@ -164,36 +164,42 @@ $hankaku_array = array('電話番号');
 //----------------------------------------------------------------------
 $encode = "UTF-8";//このファイルの文字コード定義（変更不可）
 
-if(isset($_GET)) $_GET = sanitize($_GET);//NULLバイト除去//
-if(isset($_POST)) $_POST = sanitize($_POST);//NULLバイト除去//
-if(isset($_COOKIE)) $_COOKIE = sanitize($_COOKIE);//NULLバイト除去//
-if($encode == 'SJIS') $_POST = sjisReplace($_POST,$encode);//Shift-JISの場合に誤変換文字の置換実行
-$funcRefererCheck = refererCheck($Referer_check,$Referer_check_domain);//リファラチェック実行
+if (isset($_GET))
+  $_GET = sanitize($_GET);//NULLバイト除去//
+if (isset($_POST))
+  $_POST = sanitize($_POST);//NULLバイト除去//
+if (isset($_COOKIE))
+  $_COOKIE = sanitize($_COOKIE);//NULLバイト除去//
+if ($encode == 'SJIS')
+  $_POST = sjisReplace($_POST, $encode);//Shift-JISの場合に誤変換文字の置換実行
+$funcRefererCheck = refererCheck($Referer_check, $Referer_check_domain);//リファラチェック実行
 
 //変数初期化
 $sendmail = 0;
 $empty_flag = 0;
 $post_mail = '';
-$errm ='';
-$header ='';
+$errm = '';
+$header = '';
 
-if($requireCheck == 1) {
-    $requireResArray = requireCheck($require);//必須チェック実行し返り値を受け取る
-    $errm = $requireResArray['errm'];
-    $empty_flag = $requireResArray['empty_flag'];
+if ($requireCheck == 1) {
+  $requireResArray = requireCheck($require);//必須チェック実行し返り値を受け取る
+  $errm = $requireResArray['errm'];
+  $empty_flag = $requireResArray['empty_flag'];
 }
 //メールアドレスチェック
-if(empty($errm)){
-    foreach($_POST as $key=>$val) {
-        if($val == "confirm_submit") $sendmail = 1;
-        if($key == $Email) $post_mail = h($val);
-        if($key == $Email && $mail_check == 1 && !empty($val)){
-            if(!checkMail($val)){
-                $errm .= "<p class=\"error_messe\">【".$key."】はメールアドレスの形式が正しくありません。</p>\n";
-                $empty_flag = 1;
-            }
-        }
+if (empty($errm)) {
+  foreach ($_POST as $key => $val) {
+    if ($val == "confirm_submit")
+      $sendmail = 1;
+    if ($key == $Email)
+      $post_mail = h($val);
+    if ($key == $Email && $mail_check == 1 && !empty($val)) {
+      if (!checkMail($val)) {
+        $errm .= "<p class=\"error_messe\">【" . $key . "】はメールアドレスの形式が正しくありません。</p>\n";
+        $empty_flag = 1;
+      }
     }
+  }
 }
 
 ?>
@@ -214,8 +220,8 @@ if(empty($errm)){
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-<link rel="shortcut icon" href="images/favicon.png" type="">
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <link rel="shortcut icon" href="images/favicon.png" type="">
 
   <title> 豊　雨　株　式　会　社 </title>
 
@@ -259,9 +265,10 @@ if(empty($errm)){
   <!-- End Google Map -->
 
 </head>
+
 <body class="sub_page">
-<div class="load-on" style="display: none;">
-<div id="header">
+  <div class="load-on" style="display: none;">
+    <div id="header">
       <div class="hero_area">
 
         <div class="hero_bg_box">
@@ -315,484 +322,520 @@ if(empty($errm)){
       </div>
     </div>
     <div class="fables-header fables-after-overlay">
-    <div class="container">
-      <h2 class="fables-page-title fables-second-border-color">お問い合わせ-確認画面</h2>
+      <div class="container">
+        <h2 class="fables-page-title fables-second-border-color">お問い合わせ-確認画面</h2>
+      </div>
     </div>
-  </div>
-<link href="css/confirmationScreen.css" rel="stylesheet" />
-<link href="css/responsive.css" rel="stylesheet" />
-<div id="contents" class="inner">
+    <link href="css/confirmationScreen.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <div id="contents" class="inner">
 
-<div id="contents-in">
+      <div id="contents-in">
 
-<div id="main">
+        <div id="main">
 
-<section id="contact-section" class="contact-section">
+          <section id="contact-section" class="contact-section">
 
-<?php
+            <?php
 
-if(($confirmDsp == 0 || $sendmail == 1) && $empty_flag != 1){
-    
-    //差出人に届くメールをセット
-    if($remail == 1) {
-        $userBody = mailToUser($_POST,$dsp_name,$remail_text,$mailFooterDsp,$mailSignature,$encode);
-        $reheader = userHeader($refrom_name,$to,$encode);
-        $re_subject = "=?iso-2022-jp?B?".base64_encode(mb_convert_encoding($re_subject,"JIS",$encode))."?=";
-    }
-    //管理者宛に届くメールをセット
-    $adminBody = mailToAdmin($_POST,$subject,$mailFooterDsp,$mailSignature,$encode,$confirmDsp);
-    $header = adminHeader($userMail,$post_mail,$BccMail,$to);
-    $subject = "=?iso-2022-jp?B?".base64_encode(mb_convert_encoding($subject,"JIS",$encode))."?=";
-    
-    mail($to,$subject,$adminBody,$header);
-    if($remail == 1 && !empty($post_mail)) mail($post_mail,$re_subject,$userBody,$reheader);
-}
-else if($confirmDsp == 1){ 
-    
-    /*　▼▼▼送信確認画面のレイアウト※編集可　オリジナルのデザインも適用可能▼▼▼　*/
-    ?>
-    <div style="padding: 45px 0"></div>
-    <h2 style="font-size: 2rem;font-weight:bold">お問い合わせ-<span style="color: #00bbf0">確認画面</span></h2>
-    <?php if($empty_flag == 1){ ?>
-        <div align="center">
-        <h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
-        <?php echo $errm; ?><br /><br /><input  class="button" type="button" value=" 前画面に戻る" onClick="history.back()">
-        <div style="margin-bottom:45px"></div>
-        </div>
-        <?php }else{ ?>
-            <p>以下の内容で間違いがなければ、「送信する」ボタンを押してください。</p>
-            <form action="<?php echo h($_SERVER['SCRIPT_NAME']); ?>" method="POST">
-            <table class="container"  class="ta1 mb1em">
-            <?php echo confirmOutput($_POST);//入力内容を表示?>
-            </table>
-            <p align="center"><input type="hidden" name="mail_set" value="confirm_submit">
-            <input type="hidden" name="httpReferer" value="<?php echo h($_SERVER['HTTP_REFERER']);?>">
-            <input  class="button" type="submit" value="　送信する　">
-            <input style="background-color:#565e64" class="button" type="button" value="前画面に戻る" onClick="history.back()"></p>
-            </form>
-            <?php } ?>
+            if (($confirmDsp == 0 || $sendmail == 1) && $empty_flag != 1) {
+
+              //差出人に届くメールをセット
+              if ($remail == 1) {
+                $userBody = mailToUser($_POST, $dsp_name, $remail_text, $mailFooterDsp, $mailSignature, $encode);
+                $reheader = userHeader($refrom_name, $to, $encode);
+                $re_subject = "=?iso-2022-jp?B?" . base64_encode(mb_convert_encoding($re_subject, "JIS", $encode)) . "?=";
+              }
+              //管理者宛に届くメールをセット
+              $adminBody = mailToAdmin($_POST, $subject, $mailFooterDsp, $mailSignature, $encode, $confirmDsp);
+              $header = adminHeader($userMail, $post_mail, $BccMail, $to);
+              $subject = "=?iso-2022-jp?B?" . base64_encode(mb_convert_encoding($subject, "JIS", $encode)) . "?=";
+
+              mail($to, $subject, $adminBody, $header);
+              if ($remail == 1 && !empty($post_mail))
+                mail($post_mail, $re_subject, $userBody, $reheader);
+            } else if ($confirmDsp == 1) {
+
+              /*　▼▼▼送信確認画面のレイアウト※編集可　オリジナルのデザインも適用可能▼▼▼　*/
+              ?>
+                <div style="padding: 45px 0"></div>
+                <h2 style="font-size: 2rem;font-weight:bold">お問い合わせ-<span style="color: #00bbf0">確認画面</span></h2>
+              <?php if ($empty_flag == 1) { ?>
+                  <div align="center">
+                    <h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
+                  <?php echo $errm; ?><br /><br /><input class="button" type="button" value=" 前画面に戻る"
+                      onClick="history.back()">
+                    <div style="margin-bottom:45px"></div>
+                  </div>
+              <?php } else { ?>
+                  <p>以下の内容で間違いがなければ、「送信する」ボタンを押してください。</p>
+                  <form action="<?php echo h($_SERVER['SCRIPT_NAME']); ?>" method="POST">
+                    <table class="container" class="ta1 mb1em">
+                    <?php echo confirmOutput($_POST);//入力内容を表示 ?>
+                    </table>
+                    <p align="center"><input type="hidden" name="mail_set" value="confirm_submit">
+                      <input type="hidden" name="httpReferer" value="<?php echo h($_SERVER['HTTP_REFERER']); ?>">
+                      <input class="button" type="submit" value="　送信する　">
+                      <input style="background-color:#565e64" class="button" type="button" value="前画面に戻る"
+                        onClick="history.back()">
+                    </p>
+                  </form>
+              <?php } ?>
             </div><!-- /formWrap -->
             <!-- ▲ *********** 送信内容確認部　※編集は自己責任で ************ ▲-->
-            
+
             <!-- ▼ Footerその他コンテンツなど　※編集可 ▼-->
-            
+
+          <?php
+              /* ▲▲▲送信確認画面のレイアウト　※オリジナルのデザインも適用可能▲▲▲　*/
+            }
+
+            if (($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 && $sendmail == 0))) {
+
+              /* ▼▼▼送信完了画面のレイアウト　編集可 ※送信完了後に指定のページに移動しない場合のみ表示▼▼▼　*/
+              ?>
+          <div align="center">
+            <?php if ($empty_flag == 1) { ?>
+              <h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
+              <div style="color:red"><?php echo $errm; ?></div>
+              <br /><br /><input type="button" value=" 前画面に戻る" onClick="history.back()">
+            </div>
+          <?php } else { ?>
+            送信ありがとうございました。<br />
+            送信は正常に完了しました。<br /><br />
+            <a href="<?php echo $site_top; ?>">トップページへ戻る&raquo;</a>
+            <?php copyright(); ?>
+            <!--  CV率を計測する場合ここにAnalyticsコードを貼り付け -->
             <?php
-            /* ▲▲▲送信確認画面のレイアウト　※オリジナルのデザインも適用可能▲▲▲　*/
-        }
-        
-        if(($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 && $sendmail == 0))) { 
-            
-            /* ▼▼▼送信完了画面のレイアウト　編集可 ※送信完了後に指定のページに移動しない場合のみ表示▼▼▼　*/
-            ?>
-            <div align="center">
-            <?php if($empty_flag == 1){ ?>
-                <h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
-                <div style="color:red"><?php echo $errm; ?></div>
-                <br /><br /><input type="button" value=" 前画面に戻る" onClick="history.back()">
-                </div>
-                <?php }else{ ?>
-                    送信ありがとうございました。<br />
-                    送信は正常に完了しました。<br /><br />
-                    <a href="<?php echo $site_top ;?>">トップページへ戻る&raquo;</a>
-                    <?php copyright(); ?>
-                    <!--  CV率を計測する場合ここにAnalyticsコードを貼り付け -->
-                    <?php 
-                    /* ▲▲▲送信完了画面のレイアウト 編集可 ※送信完了後に指定のページに移動しない場合のみ表示▲▲▲　*/
-                }
-                ?> </div> <?php
+            /* ▲▲▲送信完了画面のレイアウト 編集可 ※送信完了後に指定のページに移動しない場合のみ表示▲▲▲　*/
+          }
+          ?>
+        </div> <?php
             }
             //確認画面無しの場合の表示、指定のページに移動する設定の場合、エラーチェックで問題が無ければ指定ページヘリダイレクト
-            else if(($jumpPage == 1 && $sendmail == 1) || $confirmDsp == 0) { 
-                if($empty_flag == 1){ ?>
-                    <div align="center"><h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4><div style="color:red"><?php echo $errm; ?></div><br /><br /><input type="button" value=" 前画面に戻る " onClick="history.back()"></div>
-                    <?php 
-                }else{ ?>
-                    送信ありがとうございました。<br />
-                    送信は正常に完了しました。<br /><br />
-                    <a href="<?php echo $site_top ;?>">トップページへ戻る&raquo;</a>
-                    <?php // header("Location: ".$thanksPage); 
-                }
+            else if (($jumpPage == 1 && $sendmail == 1) || $confirmDsp == 0) {
+              if ($empty_flag == 1) { ?>
+            <div align="center">
+              <h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
+              <div style="color:red"><?php echo $errm; ?></div><br /><br /><input type="button" value=" 前画面に戻る "
+                onClick="history.back()">
+            </div>
+          <?php
+              } else { ?>
+            送信ありがとうございました。<br />
+            送信は正常に完了しました。<br /><br />
+            <a href="<?php echo $site_top; ?>">トップページへ戻る&raquo;</a>
+        <?php // header("Location: ".$thanksPage); 
+              }
             }
-            
+
             ?>
-            </div>
-            
-            </section>
-            
-            </div>
-            <!--/main-->
-            
-            </div>
-            <!--/contents-->
-            
-          
-<!-- footer section -->
-<div id="footer">
-      <!-- info section -->
+    </div>
 
-      <section class="info_section layout_padding2">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-lg-3 info_col">
-              <div class="info_contact">
-                <h4>
+    </section>
+
+  </div>
+  <!--/main-->
+
+  </div>
+  <!--/contents-->
+
+
+  <!-- footer section -->
+  <div id="footer">
+    <!-- info section -->
+
+    <section class="info_section layout_padding2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 info_col">
+            <div class="info_contact">
+              <h4>
+                お問い合わせ
+              </h4>
+              <div class="contact_link_box">
+                <a href="">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span>
+                    中国(上海)自由贸易试验区华申路180号1幢六层6020室
+                  </span>
+                </a>
+                <a href="">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span>
+                    Call 021-58367307
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="info_social">
+              <a target="_blank"><img src="img/lineqr.jpg" alt=""></a>
+              <a target="_blank"><img src="img/wechatqr.jpg" alt=""></a>
+
+              <!-- <a target="_blank"><img src="img/line.jpg" alt=""></a> -->
+              <a href="https://www.facebook.com/profile.php?id=100061816236948">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="https://mobile.twitter.com/toyoame">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 info_col">
+            <div class="info_detail">
+              <h4>
+                &nbsp;
+              </h4>
+              <p>
+                龙绩贸易(上海)有限公司<br>
+                中国(上海)自由贸易试验区华申路180号1幢六层6020室<br>
+                <a href="">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span>
+                    Call 052-908-6760
+                  </span>
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-2 mx-auto info_col">
+            <div class="info_link_box">
+              <h4>
+                メニュー
+              </h4>
+              <div class="info_links">
+                <a class="active" href="index.html">
+                  ホーム
+                </a>
+                <a class="" href="top.html">
+                  会社情報
+                </a>
+                <a class="" href="tradeAndWholesale.html">
+                  貿易・卸売
+                </a>
+                <a class="" href="humanResourceServices.html">
+                  人材サービス
+                </a>
+                <a class="" href="socialInitiatives.html">
+                  社会への取組
+                </a>
+                <a class="" href="contactUs.html">
                   お問い合わせ
-                </h4>
-                <div class="contact_link_box">
-                  <a href="">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    <span>
-                      中国(上海)自由贸易试验区华申路180号1幢六层6020室
-                    </span>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                    <span>
-                      Call 021-58367307
-                    </span>
-                  </a>
-                </div>
-              </div>
-              <div class="info_social">
-                <a target="_blank"><img src="img/lineqr.jpg" alt=""></a>
-                <a target="_blank"><img src="img/wechatqr.jpg" alt=""></a>
-
-                <!-- <a target="_blank"><img src="img/line.jpg" alt=""></a> -->
-                <a href="https://www.facebook.com/profile.php?id=100061816236948">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
-                <a href="https://mobile.twitter.com/toyoame">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3 info_col">
-              <div class="info_detail">
-                <h4>
-                  &nbsp;
-                </h4>
-                <p>
-                  龙绩贸易(上海)有限公司<br>
-                  中国(上海)自由贸易试验区华申路180号1幢六层6020室<br>
-                  <strong>Phone:</strong> 052-908-6760<br>
-                </p>
-              </div>
-            </div>
-            <div class="col-md-12 col-lg-2 mx-auto info_col">
-              <div class="info_link_box">
-                <h4>
-                  メニュー
-                </h4>
-                <div class="info_links">
-                  <a class="active" href="index.html">
-                    ホーム
-                  </a>
-                  <a class="" href="top.html">
-                    会社情報
-                  </a>
-                  <a class="" href="tradeAndWholesale.html">
-                    貿易・卸売
-                  </a>
-                  <a class="" href="humanResourceServices.html">
-                    人材サービス
-                  </a>
-                  <a class="" href="socialInitiatives.html">
-                    社会への取組
-                  </a>
-                  <a class="" href="contactUs.html">
-                    お問い合わせ
-                  </a>
-                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- end info section -->
+    <!-- end info section -->
 
-      <!-- footer section -->
-      <section class="footer_section">
-        <div class="container">
-          <p>
-            &copy; <span id="displayYear"></span><strong>豊雨株式会社サイト</strong>. All Rights Reserved
-          </p>
-        </div>
-      </section>
-      <!-- footer section -->
+    <!-- footer section -->
+    <section class="footer_section">
+      <div class="container">
+        <p>
+          &copy; <span id="displayYear"></span><strong>豊雨株式会社サイト</strong>. All Rights Reserved
+        </p>
+      </div>
+    </section>
+    <!-- footer section -->
 
-      <!-- The "UP" button -->
-      <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top" class="btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
-          viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
-        </svg>
-      </button>
+    <!-- The "UP" button -->
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top" class="btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- footer section -->
+  <script>
+    if (OCwindowWidth() <= 900) {
+      open_close("menubar_hdr", "menubar-s");
+    }
+  </script>
+  </div>
+  <div id="loader-bg">
+    <div id="loader">
+      <img src="img/load.svg" alt="Now Loading...">
     </div>
+  </div>
+</body>
 
-<!-- footer section -->
-            <script>
-            if (OCwindowWidth() <= 900) {
-                open_close("menubar_hdr", "menubar-s");
-            }
-            </script>
-            </div>
-            <div id="loader-bg">
-                <div id="loader">
-                    <img src="img/load.svg" alt="Now Loading...">
-            </div>
-            </div>
-            </body>
-            </html>
-            
-            <?php
-            
-            // 以下の変更は知識のある方のみ自己責任でお願いします。
-            
-            //----------------------------------------------------------------------
-            //  関数定義(START)
-            //----------------------------------------------------------------------
-            function checkMail($str){
-                $mailaddress_array = explode('@',$str);
-                if(preg_match("/^[\.!#%&\-_0-9a-zA-Z\?\/\+]+\@[!#%&\-_0-9a-z]+(\.[!#%&\-_0-9a-z]+)+$/", "$str") && count($mailaddress_array) ==2){
-                    return true;
-                }else{
-                    return false;
+</html>
+
+<?php
+
+// 以下の変更は知識のある方のみ自己責任でお願いします。
+
+//----------------------------------------------------------------------
+//  関数定義(START)
+//----------------------------------------------------------------------
+function checkMail($str)
+{
+  $mailaddress_array = explode('@', $str);
+  if (preg_match("/^[\.!#%&\-_0-9a-zA-Z\?\/\+]+\@[!#%&\-_0-9a-z]+(\.[!#%&\-_0-9a-z]+)+$/", "$str") && count($mailaddress_array) == 2) {
+    return true;
+  } else {
+    return false;
+  }
+}
+function h($string)
+{
+  global $encode;
+  return htmlspecialchars($string, ENT_QUOTES, $encode);
+}
+function sanitize($arr)
+{
+  if (is_array($arr)) {
+    return array_map('sanitize', $arr);
+  }
+  return str_replace("\0", "", $arr);
+}
+//Shift-JISの場合に誤変換文字の置換関数
+function sjisReplace($arr, $encode)
+{
+  foreach ($arr as $key => $val) {
+    $key = str_replace('＼', 'ー', $key);
+    $resArray[$key] = $val;
+  }
+  return $resArray;
+}
+//送信メールにPOSTデータをセットする関数
+function postToMail($arr)
+{
+  global $hankaku, $hankaku_array;
+  $resArray = '';
+  foreach ($arr as $key => $val) {
+    $out = '';
+    if (is_array($val)) {
+      foreach ($val as $key02 => $item) {
+        //連結項目の処理
+        if (is_array($item)) {
+          $out .= connect2val($item);
+        } else {
+          $out .= $item . ', ';
+        }
+      }
+      $out = rtrim($out, ', ');
+
+    } else {
+      $out = $val;
+    }//チェックボックス（配列）追記ここまで
+    // if(get_magic_quotes_gpc()) { $out = stripslashes($out); }
+    $out = stripslashes($out);
+
+    //全角→半角変換
+    if ($hankaku == 1) {
+      $out = zenkaku2hankaku($key, $out, $hankaku_array);
+    }
+    if ($out != "confirm_submit" && $key != "httpReferer") {
+      $resArray .= "【 " . h($key) . " 】 " . h($out) . "\n";
+    }
+  }
+  return $resArray;
+}
+//確認画面の入力内容出力用関数
+function confirmOutput($arr)
+{
+  global $hankaku, $hankaku_array;
+  $html = '';
+  foreach ($arr as $key => $val) {
+    $out = '';
+    if (is_array($val)) {
+      foreach ($val as $key02 => $item) {
+        //連結項目の処理
+        if (is_array($item)) {
+          $out .= connect2val($item);
+        } else {
+          $out .= $item . ', ';
+        }
+      }
+      $out = rtrim($out, ', ');
+
+    } else {
+      $out = $val;
+    }//チェックボックス（配列）追記ここまで
+    // if(get_magic_quotes_gpc()) { $out = stripslashes($out); }
+    $out = stripslashes($out);
+    $out = nl2br(h($out));//※追記 改行コードを<br>タグに変換
+    $key = h($key);
+
+    //全角→半角変換
+    if ($hankaku == 1) {
+      $out = zenkaku2hankaku($key, $out, $hankaku_array);
+    }
+
+    $html .= "<tr><th>" . $key . "</th><td>" . $out;
+    $html .= '<input type="hidden" name="' . $key . '" value="' . str_replace(array("<br />", "<br>"), "", $out) . '" />';
+    $html .= "</td></tr>\n";
+  }
+  return $html;
+}
+
+//全角→半角変換
+function zenkaku2hankaku($key, $out, $hankaku_array)
+{
+  global $encode;
+  if (is_array($hankaku_array) && function_exists('mb_convert_kana')) {
+    foreach ($hankaku_array as $hankaku_array_val) {
+      if ($key == $hankaku_array_val) {
+        $out = mb_convert_kana($out, 'a', $encode);
+      }
+    }
+  }
+  return $out;
+}
+//配列連結の処理
+function connect2val($arr)
+{
+  $out = '';
+  foreach ($arr as $key => $val) {
+    if ($key === 0 || $val == '') {//配列が未記入（0）、または内容が空のの場合には連結文字を付加しない（型まで調べる必要あり）
+      $key = '';
+    } elseif (strpos($key, "円") !== false && $val != '' && preg_match("/^[0-9]+$/", $val)) {
+      $val = number_format($val);//金額の場合には3桁ごとにカンマを追加
+    }
+    $out .= $val . $key;
+  }
+  return $out;
+}
+
+//管理者宛送信メールヘッダ
+function adminHeader($userMail, $post_mail, $BccMail, $to)
+{
+  $header = '';
+  if ($userMail == 1 && !empty($post_mail)) {
+    $header = "From: $post_mail\n";
+    if ($BccMail != '') {
+      $header .= "Bcc: $BccMail\n";
+    }
+    $header .= "Reply-To: " . $post_mail . "\n";
+  } else {
+    if ($BccMail != '') {
+      $header = "Bcc: $BccMail\n";
+    }
+    $header .= "Reply-To: " . $to . "\n";
+  }
+  $header .= "Content-Type:text/plain;charset=iso-2022-jp\nX-Mailer: PHP/" . phpversion();
+  return $header;
+}
+//管理者宛送信メールボディ
+function mailToAdmin($arr, $subject, $mailFooterDsp, $mailSignature, $encode, $confirmDsp)
+{
+  $adminBody = "「" . $subject . "」からメールが届きました\n\n";
+  $adminBody .= "＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n\n";
+  $adminBody .= postToMail($arr);//POSTデータを関数からセット
+  $adminBody .= "\n＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n";
+  $adminBody .= "送信された日時：" . date("Y/m/d (D) H:i:s", time()) . "\n";
+  $adminBody .= "送信者のIPアドレス：" . @$_SERVER["REMOTE_ADDR"] . "\n";
+  $adminBody .= "送信者のホスト名：" . getHostByAddr(getenv('REMOTE_ADDR')) . "\n";
+  if ($confirmDsp != 1) {
+    $adminBody .= "問い合わせのページURL：" . @$_SERVER['HTTP_REFERER'] . "\n";
+  } else {
+    $adminBody .= "問い合わせのページURL：" . @$arr['httpReferer'] . "\n";
+  }
+  if ($mailFooterDsp == 1)
+    $adminBody .= $mailSignature;
+  return mb_convert_encoding($adminBody, "JIS", $encode);
+}
+
+//ユーザ宛送信メールヘッダ
+function userHeader($refrom_name, $to, $encode)
+{
+  $reheader = "From: ";
+  if (!empty($refrom_name)) {
+    $default_internal_encode = mb_internal_encoding();
+    if ($default_internal_encode != $encode) {
+      mb_internal_encoding($encode);
+    }
+    $reheader .= mb_encode_mimeheader($refrom_name) . " <" . $to . ">\nReply-To: " . $to;
+  } else {
+    $reheader .= "$to\nReply-To: " . $to;
+  }
+  $reheader .= "\nContent-Type: text/plain;charset=iso-2022-jp\nX-Mailer: PHP/" . phpversion();
+  return $reheader;
+}
+//ユーザ宛送信メールボディ
+function mailToUser($arr, $dsp_name, $remail_text, $mailFooterDsp, $mailSignature, $encode)
+{
+  $userBody = '';
+  if (isset($arr[$dsp_name]))
+    $userBody = h($arr[$dsp_name]) . " 様\n";
+  $userBody .= $remail_text;
+  $userBody .= "\n＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n\n";
+  $userBody .= postToMail($arr);//POSTデータを関数からセット
+  $userBody .= "\n＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n\n";
+  $userBody .= "送信日時：" . date("Y/m/d (D) H:i:s", time()) . "\n";
+  if ($mailFooterDsp == 1)
+    $userBody .= $mailSignature;
+  return mb_convert_encoding($userBody, "JIS", $encode);
+}
+//必須チェック関数
+function requireCheck($require)
+{
+  $res['errm'] = '';
+  $res['empty_flag'] = 0;
+  foreach ($require as $requireVal) {
+    $existsFalg = '';
+    foreach ($_POST as $key => $val) {
+      if ($key == $requireVal) {
+
+        //連結指定の項目（配列）のための必須チェック
+        if (is_array($val)) {
+          $connectEmpty = 0;
+          foreach ($val as $kk => $vv) {
+            if (is_array($vv)) {
+              foreach ($vv as $kk02 => $vv02) {
+                if ($vv02 == '') {
+                  $connectEmpty++;
                 }
+              }
             }
-            function h($string) {
-                global $encode;
-                return htmlspecialchars($string, ENT_QUOTES,$encode);
-            }
-            function sanitize($arr){
-                if(is_array($arr)){
-                    return array_map('sanitize',$arr);
-                }
-                return str_replace("\0","",$arr);
-            }
-            //Shift-JISの場合に誤変換文字の置換関数
-            function sjisReplace($arr,$encode){
-                foreach($arr as $key => $val){
-                    $key = str_replace('＼','ー',$key);
-                    $resArray[$key] = $val;
-                }
-                return $resArray;
-            }
-            //送信メールにPOSTデータをセットする関数
-            function postToMail($arr){
-                global $hankaku,$hankaku_array;
-                $resArray = '';
-                foreach($arr as $key => $val) {
-                    $out = '';
-                    if(is_array($val)){
-                        foreach($val as $key02 => $item){ 
-                            //連結項目の処理
-                            if(is_array($item)){
-                                $out .= connect2val($item);
-                            }else{
-                                $out .= $item . ', ';
-                            }
-                        }
-                        $out = rtrim($out,', ');
-                        
-                    }else{ $out = $val; }//チェックボックス（配列）追記ここまで
-                    // if(get_magic_quotes_gpc()) { $out = stripslashes($out); }
-                    $out = stripslashes($out);
-                    
-                    //全角→半角変換
-                    if($hankaku == 1){
-                        $out = zenkaku2hankaku($key,$out,$hankaku_array);
-                    }
-                    if($out != "confirm_submit" && $key != "httpReferer") {
-                        $resArray .= "【 ".h($key)." 】 ".h($out)."\n";
-                    }
-                }
-                return $resArray;
-            }
-            //確認画面の入力内容出力用関数
-            function confirmOutput($arr){
-                global $hankaku,$hankaku_array;
-                $html = '';
-                foreach($arr as $key => $val) {
-                    $out = '';
-                    if(is_array($val)){
-                        foreach($val as $key02 => $item){ 
-                            //連結項目の処理
-                            if(is_array($item)){
-                                $out .= connect2val($item);
-                            }else{
-                                $out .= $item . ', ';
-                            }
-                        }
-                        $out = rtrim($out,', ');
-                        
-                    }else{ $out = $val; }//チェックボックス（配列）追記ここまで
-                    // if(get_magic_quotes_gpc()) { $out = stripslashes($out); }
-                    $out = stripslashes($out);
-                    $out = nl2br(h($out));//※追記 改行コードを<br>タグに変換
-                    $key = h($key);
-                    
-                    //全角→半角変換
-                    if($hankaku == 1){
-                        $out = zenkaku2hankaku($key,$out,$hankaku_array);
-                    }
-                    
-                    $html .= "<tr><th>".$key."</th><td>".$out;
-                    $html .= '<input type="hidden" name="'.$key.'" value="'.str_replace(array("<br />","<br>"),"",$out).'" />';
-                    $html .= "</td></tr>\n";
-                }
-                return $html;
-            }
-            
-            //全角→半角変換
-            function zenkaku2hankaku($key,$out,$hankaku_array){
-                global $encode;
-                if(is_array($hankaku_array) && function_exists('mb_convert_kana')){
-                    foreach($hankaku_array as $hankaku_array_val){
-                        if($key == $hankaku_array_val){
-                            $out = mb_convert_kana($out,'a',$encode);
-                        }
-                    }
-                }
-                return $out;
-            }
-            //配列連結の処理
-            function connect2val($arr){
-                $out = '';
-                foreach($arr as $key => $val){
-                    if($key === 0 || $val == ''){//配列が未記入（0）、または内容が空のの場合には連結文字を付加しない（型まで調べる必要あり）
-                        $key = '';
-                    }elseif(strpos($key,"円") !== false && $val != '' && preg_match("/^[0-9]+$/",$val)){
-                        $val = number_format($val);//金額の場合には3桁ごとにカンマを追加
-                    }
-                    $out .= $val . $key;
-                }
-                return $out;
-            }
-            
-            //管理者宛送信メールヘッダ
-            function adminHeader($userMail,$post_mail,$BccMail,$to){
-                $header = '';
-                if($userMail == 1 && !empty($post_mail)) {
-                    $header="From: $post_mail\n";
-                    if($BccMail != '') {
-                        $header.="Bcc: $BccMail\n";
-                    }
-                    $header.="Reply-To: ".$post_mail."\n";
-                }else {
-                    if($BccMail != '') {
-                        $header="Bcc: $BccMail\n";
-                    }
-                    $header.="Reply-To: ".$to."\n";
-                }
-                $header.="Content-Type:text/plain;charset=iso-2022-jp\nX-Mailer: PHP/".phpversion();
-                return $header;
-            }
-            //管理者宛送信メールボディ
-            function mailToAdmin($arr,$subject,$mailFooterDsp,$mailSignature,$encode,$confirmDsp){
-                $adminBody="「".$subject."」からメールが届きました\n\n";
-                $adminBody .="＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n\n";
-                $adminBody.= postToMail($arr);//POSTデータを関数からセット
-                $adminBody.="\n＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n";
-                $adminBody.="送信された日時：".date( "Y/m/d (D) H:i:s", time() )."\n";
-                $adminBody.="送信者のIPアドレス：".@$_SERVER["REMOTE_ADDR"]."\n";
-                $adminBody.="送信者のホスト名：".getHostByAddr(getenv('REMOTE_ADDR'))."\n";
-                if($confirmDsp != 1){
-                    $adminBody.="問い合わせのページURL：".@$_SERVER['HTTP_REFERER']."\n";
-                }else{
-                    $adminBody.="問い合わせのページURL：".@$arr['httpReferer']."\n";
-                }
-                if($mailFooterDsp == 1) $adminBody.= $mailSignature;
-                return mb_convert_encoding($adminBody,"JIS",$encode);
-            }
-            
-            //ユーザ宛送信メールヘッダ
-            function userHeader($refrom_name,$to,$encode){
-                $reheader = "From: ";
-                if(!empty($refrom_name)){
-                    $default_internal_encode = mb_internal_encoding();
-                    if($default_internal_encode != $encode){
-                        mb_internal_encoding($encode);
-                    }
-                    $reheader .= mb_encode_mimeheader($refrom_name)." <".$to.">\nReply-To: ".$to;
-                }else{
-                    $reheader .= "$to\nReply-To: ".$to;
-                }
-                $reheader .= "\nContent-Type: text/plain;charset=iso-2022-jp\nX-Mailer: PHP/".phpversion();
-                return $reheader;
-            }
-            //ユーザ宛送信メールボディ
-            function mailToUser($arr,$dsp_name,$remail_text,$mailFooterDsp,$mailSignature,$encode){
-                $userBody = '';
-                if(isset($arr[$dsp_name])) $userBody = h($arr[$dsp_name]). " 様\n";
-                $userBody.= $remail_text;
-                $userBody.="\n＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n\n";
-                $userBody.= postToMail($arr);//POSTデータを関数からセット
-                $userBody.="\n＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\n\n";
-                $userBody.="送信日時：".date( "Y/m/d (D) H:i:s", time() )."\n";
-                if($mailFooterDsp == 1) $userBody.= $mailSignature;
-                return mb_convert_encoding($userBody,"JIS",$encode);
-            }
-            //必須チェック関数
-            function requireCheck($require){
-                $res['errm'] = '';
-                $res['empty_flag'] = 0;
-                foreach($require as $requireVal){
-                    $existsFalg = '';
-                    foreach($_POST as $key => $val) {
-                        if($key == $requireVal) {
-                            
-                            //連結指定の項目（配列）のための必須チェック
-                            if(is_array($val)){
-                                $connectEmpty = 0;
-                                foreach($val as $kk => $vv){
-                                    if(is_array($vv)){
-                                        foreach($vv as $kk02 => $vv02){
-                                            if($vv02 == ''){
-                                                $connectEmpty++;
-                                            }
-                                        }
-                                    }
-                                    
-                                }
-                                if($connectEmpty > 0){
-                                    $res['errm'] .= "<p class=\"error_messe\">【".h($key)."】は必須項目です。</p>\n";
-                                    $res['empty_flag'] = 1;
-                                }
-                            }
-                            //デフォルト必須チェック
-                            elseif($val == ''){
-                                $res['errm'] .= "<p class=\"error_messe\">【".h($key)."】は必須項目です。</p>\n";
-                                $res['empty_flag'] = 1;
-                            }
-                            
-                            $existsFalg = 1;
-                            break;
-                        }
-                        
-                    }
-                    if($existsFalg != 1){
-                        $res['errm'] .= "<p class=\"error_messe\">【".$requireVal."】が未選択です。</p>\n";
-                        $res['empty_flag'] = 1;
-                    }
-                }
-                
-                return $res;
-            }
-            //リファラチェック
-            function refererCheck($Referer_check,$Referer_check_domain){
-                if($Referer_check == 1 && !empty($Referer_check_domain)){
-                    if(strpos($_SERVER['HTTP_REFERER'],$Referer_check_domain) === false){
-                        return exit('<p align="center">リファラチェックエラー。フォームページのドメインとこのファイルのドメインが一致しません</p>');
-                    }
-                }
-            }
-            function copyright(){
-                echo '<a style="display:block;text-align:center;margin:15px 0;font-size:11px;color:#aaa;text-decoration:none" href="http://www.php-factory.net/" target="_blank">- PHP工房 -</a>';
-            }
-            //----------------------------------------------------------------------
-            //  関数定義(END)
-            //----------------------------------------------------------------------
-            ?>
+
+          }
+          if ($connectEmpty > 0) {
+            $res['errm'] .= "<p class=\"error_messe\">【" . h($key) . "】は必須項目です。</p>\n";
+            $res['empty_flag'] = 1;
+          }
+        }
+        //デフォルト必須チェック
+        elseif ($val == '') {
+          $res['errm'] .= "<p class=\"error_messe\">【" . h($key) . "】は必須項目です。</p>\n";
+          $res['empty_flag'] = 1;
+        }
+
+        $existsFalg = 1;
+        break;
+      }
+
+    }
+    if ($existsFalg != 1) {
+      $res['errm'] .= "<p class=\"error_messe\">【" . $requireVal . "】が未選択です。</p>\n";
+      $res['empty_flag'] = 1;
+    }
+  }
+
+  return $res;
+}
+//リファラチェック
+function refererCheck($Referer_check, $Referer_check_domain)
+{
+  if ($Referer_check == 1 && !empty($Referer_check_domain)) {
+    if (strpos($_SERVER['HTTP_REFERER'], $Referer_check_domain) === false) {
+      return exit('<p align="center">リファラチェックエラー。フォームページのドメインとこのファイルのドメインが一致しません</p>');
+    }
+  }
+}
+function copyright()
+{
+  echo '<a style="display:block;text-align:center;margin:15px 0;font-size:11px;color:#aaa;text-decoration:none" href="http://www.php-factory.net/" target="_blank">- PHP工房 -</a>';
+}
+//----------------------------------------------------------------------
+//  関数定義(END)
+//----------------------------------------------------------------------
+?>
