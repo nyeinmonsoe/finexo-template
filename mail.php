@@ -406,7 +406,7 @@ if (empty($errm)) {
             <a href="<?php echo $site_top; ?>">トップページへ戻る&raquo;</a>
             <?php copyright(); ?>
             <!--  CV率を計測する場合ここにAnalyticsコードを貼り付け -->
-          <?php
+            <?php
             /* ▲▲▲送信完了画面のレイアウト 編集可 ※送信完了後に指定のページに移動しない場合のみ表示▲▲▲　*/
           }
           ?>
@@ -420,7 +420,7 @@ if (empty($errm)) {
               <div style="color:red"><?php echo $errm; ?></div><br /><br /><input type="button" value=" 前画面に戻る "
                 onClick="history.back()">
             </div>
-        <?php
+          <?php
               } else { ?>
             送信ありがとうございました。<br />
             送信は正常に完了しました。<br /><br />
@@ -493,7 +493,7 @@ if (empty($errm)) {
                 <a href="">
                   <i class="fa fa-phone" aria-hidden="true"></i>
                   <span>
-                    Call 021-58367307
+                    Call 052-908-6760
                   </span>
                 </a>
               </p>
