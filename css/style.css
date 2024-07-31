@@ -1183,6 +1183,10 @@ div {
   color: #00bbf0 !important;
 }
 
+.sdg-initiative{
+  width: 150px;
+}
+
 @media screen and (max-width: 750px) {
   #loader {
     width: 30vw;
