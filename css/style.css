@@ -1175,10 +1175,6 @@ div {
   animation: 7s linear infinite rotation;
 }
 
-.call:hover{
-  color: #00bbf0 !important;
-}
-
 .sdg-initiative{
   width: 150px;
 }
