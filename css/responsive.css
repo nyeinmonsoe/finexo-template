@@ -1,13 +1,13 @@
 @media (max-width: 1300px) {}
 
 @media (max-width: 1120px) {
-#navbarSupportedContent .nav-item{
-  font-size: 14px !important;
-}
+  #navbarSupportedContent .nav-item {
+    font-size: 14px !important;
+  }
 
-.navbar-brand span {
-  font-size: 18px !important;
-}
+  .navbar-brand span {
+    font-size: 18px !important;
+  }
 
 }
 
@@ -73,7 +73,7 @@
     position: unset;
     margin: 0 2.5px;
   }
-  
+
 }
 
 @media (max-width: 480px) {
@@ -94,12 +94,17 @@
     padding: 10px 60px;
     margin-top: 10px;
   }
+
   .navbar-brand .company_name {
     font-size: 20px !important;
   }
 }
 
 @media (max-width: 420px) {
+  .service_section .box-container {
+    margin-top: 20px;
+  }
+
   .service_section .box {
     flex-direction: column;
   }

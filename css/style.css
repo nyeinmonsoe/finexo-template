@@ -415,12 +415,6 @@ a:focus {
   position: relative;
 }
 
-@media screen and (max-width: 750px) {
-  .service_section .box-container {
-    margin-top: 20px;
-  }
-}
-
 .service_section .box {
   display: -webkit-box;
   display: -ms-flexbox;
