@@ -1002,7 +1002,7 @@ div {
   height: 70px;
 }
 
-.info_social .twitter-logo{
+.info_social .twitter-logo {
   width: 30px;
   height: 30px;
 }
@@ -1189,11 +1189,13 @@ div {
   z-index: 100001;
   animation: 7s linear infinite rotation;
 }
+
 #contact-confirm:disabled {
   background: #ccc;
   border: 1px solid #999;
   color: #999;
 }
+
 @media screen and (max-width: 750px) {
   #loader {
     width: 30vw;
@@ -1246,3 +1248,15 @@ div {
 }
 
 /* End - 人材サービス　Ansurs-西川さん */
+
+/* Start - 会社情報　Ansurs-西川さん */
+
+.disableTel a[href^="tel:"] {
+  color: #fff;
+  /* 任意の色 */
+  text-decoration: none;
+  pointer-events: none;
+  font-size: 16px;
+}
+
+/* End - 会社情報　Ansurs-西川さん */
