@@ -1002,6 +1002,11 @@ div {
   height: 70px;
 }
 
+.info_social .twitter-logo{
+  width: 30px;
+  height: 30px;
+}
+
 .info_section .info_social a:hover {
   color: #00bbf0;
 }
@@ -1184,7 +1189,11 @@ div {
   z-index: 100001;
   animation: 7s linear infinite rotation;
 }
-
+#contact-confirm:disabled {
+  background: #ccc;
+  border: 1px solid #999;
+  color: #999;
+}
 @media screen and (max-width: 750px) {
   #loader {
     width: 30vw;

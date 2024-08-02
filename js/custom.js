@@ -63,5 +63,5 @@ function ContactAgreement(checkbox) {
 
 
 
-document.addEventListener('DOMContentLoaded', updateSubmitButtonState);
+//document.addEventListener('DOMContentLoaded', updateSubmitButtonState);
 document.addEventListener('pageshow', updateSubmitButtonState);
