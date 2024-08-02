@@ -1251,8 +1251,16 @@ div {
 
 /* Start - 会社情報　Ansurs-西川さん */
 
-.disableTel a[href^="tel:"] {
+.disableTel-white a[href^="tel:"] {
   color: #fff;
+  /* 任意の色 */
+  text-decoration: none;
+  pointer-events: none;
+  font-size: 16px;
+}
+
+.disableTel-black a[href^="tel:"] {
+  color: #000;
   /* 任意の色 */
   text-decoration: none;
   pointer-events: none;
