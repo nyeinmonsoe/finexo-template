@@ -76,6 +76,10 @@
         font-size: 11px;
 
     }
+    .service_section .box h5{
+        font-size: 17px;
+    }
+    
 }
 
 @media (max-width: 480px) {
