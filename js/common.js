@@ -15,11 +15,18 @@ $(function () {
   //     $('#'+pagename[0]).addClass("active");
   //   }
 
-  $(document).on("click",".nav-item",function() {
+
+  var id = $('.nav-item.active').attr('id');
+  if(id!="index"){
     showload();
+    setTimeout('stopload()', 1000);
+  }
+  $(document).on("click",".nav-item",function() {
+    var eleid = $(this).attr('id');
+    if(eleid!="index"){
+      showload();
+    }
   });
-  showload();
-  setTimeout('stopload()', 1000);
 })
 function showload(){
   $('#loader-bg').css("display", "block");
