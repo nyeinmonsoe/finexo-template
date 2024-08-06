@@ -1,22 +1,30 @@
-
 .trade_overview .why_container {
     background: #f8f8f9;
     padding: 10px 30px 30px 30px;
 }
 
 .business_section .team_container .box {
+    flex: 1;
+    height: 100%;
     margin-top: 0;
-    padding: 35px 20px 10px 20px;
+    padding: 35px 20px 35px 20px;
     background: -webkit-gradient(linear, left top, left bottom, from(#3580e1), to(#2d6dc2));
     background: linear-gradient(to bottom, #3580e1, #2d6dc2);
 }
+
 .business_section .team_container .box .detail-box {
-    height: 165px;
     text-align: center;
+    height: auto;
 }
+
+.business_section .team_container .box .detail-box .business-box {
+    margin-bottom: 0;
+}
+
 .business_section .team_container .box .detail-box h5 {
     color: #fff;
 }
+
 .business_section .team_container .box:after {
     content: "";
     position: absolute;
@@ -34,7 +42,7 @@
     max-width: 92%;
     margin-left: 12px;
     margin-right: 12px;
-      
+
 }
 
 .team_section .team_container .box .img-box,
@@ -42,22 +50,27 @@
     position: relative;
     z-index: 2;
 }
-.business_section .team_container .box:hover::after  {
+
+.business_section .team_container .box:hover::after {
     transform: scaleY(1);
 }
 
-.exhibition_section .box{
+.exhibition_section .box {
     margin-top: 22px;
 }
-.exhibition_section .box-01{
+
+.exhibition_section .box-01 {
     align-items: flex-start;
 }
-.exhibition_section .box-03{
+
+.exhibition_section .box-03 {
     align-items: flex-end;
 }
-.exhibition_section .box-01{
+
+.exhibition_section .box-01 {
     align-items: flex-start;
 }
+
 .exh-box h4 {
     border-left: 3px solid #126199;
     padding-left: 15px;
@@ -70,46 +83,56 @@
     padding: 20px;
     border-radius: 5px;
 }
+
 .region-img-box img {
     width: 100%;
     height: 450px;
 }
+
 .brand_section {
     background: #ecf5ff;
 }
+
 /* Zoom In #brand-image */
-.brand-img-box,.brand-img-box figure {
+.brand-img-box,
+.brand-img-box figure {
     width: 177px;
 }
+
 .brand-img-box figure img {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 }
+
 .brand-img-box figure:hover img {
-	-webkit-transform: scale(1.3);
-	transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
 }
 
 
 @media (max-width: 1199px) {
-    .brand-img-box,.brand-img-box figure {
+
+    .brand-img-box,
+    .brand-img-box figure {
         width: 100%;
     }
+
     .brand-img-box figure img {
-      width: 100%;
+        width: 100%;
     }
 }
 
 @media (max-width: 1165px) {
     .business_section .team_container .box:after {
         flex: 0 0 95%;
-        max-width: 95%;  
+        max-width: 95%;
     }
 }
+
 @media (max-width: 643px) {
- 
+
     .business_section .team_container .box .detail-box {
         height: 120px;
     }
