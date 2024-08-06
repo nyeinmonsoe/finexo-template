@@ -507,7 +507,7 @@ if (empty($errm)) {
                 <a class="active" href="index.html">
                   ホーム
                 </a>
-                <a class="" href="top.html">
+                <a class="" href="compInfo.html">
                   会社情報
                 </a>
                 <a class="" href="tradeAndWholesale.html">
