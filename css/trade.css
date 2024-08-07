@@ -106,11 +106,20 @@
     transition: .3s ease-in-out;
 }
 
+
+.brand-img-box figure .white-img-box {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    background-color: #fff;
+    width: 90%;
+}
+
 .brand-img-box figure:hover img {
     -webkit-transform: scale(1.3);
     transform: scale(1.3);
 }
-
 
 @media (max-width: 1199px) {
 
@@ -129,6 +138,7 @@
         flex: 0 0 95%;
         max-width: 95%;
     }
+
     .exh-img-box img {
         padding: 10px;
     }
@@ -139,7 +149,7 @@
         height: 200px;
         padding: 5px;
     }
-    
+
 }
 
 
@@ -148,22 +158,26 @@
         align-items: center;
     }
 }
+
 @media (max-width: 766px) {
     .exh-img-box img {
         height: 366px;
         padding: 20px;
     }
 }
+
 @media (max-width: 643px) {
 
     .business_section .team_container .box .detail-box {
         height: 120px;
     }
+
     .exh-img-box img {
         height: 327px;
         padding: 20px;
     }
 }
+
 @media (max-width: 576px) {
     .exh-img-box img {
         height: 327px;
@@ -171,13 +185,15 @@
         width: 456px;
     }
 }
+
 @media (max-width: 448px) {
     .exh-img-box img {
         width: 100%;
     }
 }
+
 @media (max-width: 344px) {
     .exh-img-box img {
-       height: 215px;
+        height: 215px;
     }
 }
