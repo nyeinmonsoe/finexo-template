@@ -129,17 +129,55 @@
         flex: 0 0 95%;
         max-width: 95%;
     }
+    .exh-img-box img {
+        padding: 10px;
+    }
 }
 
+@media (max-width: 990px) {
+    .exh-img-box img {
+        height: 200px;
+        padding: 5px;
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+    .exh-img-box:first-child {
+        align-items: center;
+    }
+}
+@media (max-width: 766px) {
+    .exh-img-box img {
+        height: 366px;
+        padding: 20px;
+    }
+}
 @media (max-width: 643px) {
 
     .business_section .team_container .box .detail-box {
         height: 120px;
     }
+    .exh-img-box img {
+        height: 327px;
+        padding: 20px;
+    }
 }
-
-@media (max-width: 768px) {
-    .exh-img-box:first-child {
-        align-items: center;
+@media (max-width: 576px) {
+    .exh-img-box img {
+        height: 327px;
+        padding: 20px;
+        width: 456px;
+    }
+}
+@media (max-width: 448px) {
+    .exh-img-box img {
+        width: 100%;
+    }
+}
+@media (max-width: 344px) {
+    .exh-img-box img {
+       height: 215px;
     }
 }

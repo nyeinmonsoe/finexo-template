@@ -8,6 +8,7 @@
     align-items: start !important;
     text-align: left !important;
     background-color: unset;
+    padding: 0px;
 }
 
 .service_section .box h5 {
@@ -22,7 +23,9 @@
     color: black;
     font-size: 10px;
 }
-
+.achievements_box{
+    margin-top: 5px !important;
+}
 /* .border_tit {
      border-left: 4px solid #00bbf0; 
     padding: 0 0 0 0.7em;
