@@ -21,12 +21,11 @@
 .fables-header {
     padding: 33px 0;
     background-image: url(../img/subBanner.jpg);
-    background-repeat: no-repeat;
+
 }
 .fables-header-cominfo {
     padding: 33px 0;
     background-image: url(../img/compInfo.png);
-    background-repeat: no-repeat;
 }
 .fables-header-humanresource {
     padding: 33px 0;
