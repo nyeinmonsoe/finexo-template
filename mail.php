@@ -243,7 +243,7 @@ if (empty($errm)) {
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
   <link href="css/bootstrap-icons.css" rel="stylesheet">
-  <link href="css/top-banner.css" rel="stylesheet" />
+  <link href="css/top-banner.css?v=1" rel="stylesheet" />
 
   <!-- jQery -->
 
@@ -321,8 +321,8 @@ if (empty($errm)) {
         <!-- end header section -->
       </div>
     </div>
-    <div class="fables-header fables-after-overlay">
-      <div class="container">
+    <div class="fables-header-contactus fables-after-overlay">
+      <div class="fables-header-content">
         <h2 class="fables-page-title fables-second-border-color">お問い合わせ-確認画面</h2>
       </div>
     </div>

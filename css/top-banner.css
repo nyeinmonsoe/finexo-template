@@ -21,24 +21,37 @@
 .fables-header {
     padding: 33px 0;
     background-image: url(../img/subBanner.jpg);
+    background-repeat: no-repeat;
 }
 .fables-header-cominfo {
     padding: 33px 0;
     background-image: url(../img/compInfo.png);
+    background-repeat: no-repeat;
 }
 .fables-header-humanresource {
     padding: 33px 0;
     background-image: url(../img/humanresource.png);
+    background-repeat: no-repeat;
 }
 .fables-header-society {
     padding: 33px 0;
     background-image: url(../img/society.png);
-    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
 }
 .fables-header-contactus {
     padding: 33px 0;
     background-image: url(../img/contactus2.png);
-    background-size: 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.fables-header-privacy{
+    padding: 33px 0;
+    background-image: url(../img/privacy.png);
+    background-repeat: no-repeat;
+
 }
 .fables-after-overlay::after {
     content: "";
@@ -48,4 +61,12 @@
     right: 0;
     bottom: 0;
     background-color: #1261999c;
+}
+.fables-header-content{
+    margin-left: 39px;
+}
+@media (max-width: 490px) {
+    .fables-page-title {
+        font-size: 38px;
+    }
 }
