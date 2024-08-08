@@ -36,6 +36,7 @@
     background-image: url(../img/society.png);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 100%;
     
 }
 .fables-header-contactus {
@@ -62,6 +63,11 @@
 }
 .fables-header-content{
     margin-left: 39px;
+}
+@media (max-width: 654px) {
+    .fables-header-society {
+        background-size: 100% 100%;
+    }
 }
 @media (max-width: 490px) {
     .fables-page-title {
